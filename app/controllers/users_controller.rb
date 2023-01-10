@@ -10,6 +10,11 @@ class UsersController < ApplicationController
         render json: user, status: :ok 
     end
 
+    def show
+        user = User.find(session[:user_id])
+        render json: user, status: :ok
+    end
+
     private
 
     def user_params

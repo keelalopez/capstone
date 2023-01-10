@@ -40,7 +40,7 @@ function SignupLoginForms({setCurrentUser}) {
 
     return (
         <div id="signup-container">
-            <p>Hellow form signuploginforms</p>
+            <p>Sign Up</p>
             <div id="signup-form">
                 <form  onSubmit={handleSignup}>
                     Username: <input 
