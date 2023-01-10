@@ -3,7 +3,7 @@ import {useState} from 'react';
 import SignupLoginForms from './Components/SigupLoginForms.js';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState("keila prayers")
+  const [currentUser, setCurrentUser] = useState("keila")
 
   return (
    <div className="App">
