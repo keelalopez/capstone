@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import SignupLoginForms from './Components/SigupLoginForms.js';
+import LoginForm from './Components/LoginForm.js';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState("keila")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="App">
+    <p>hellow world</p>
+    <p>Hop in, {currentUser}!</p>
+    <SignupLoginForms 
+      setCurrentUser={setCurrentUser} />
+    <LoginForm
+      setCurrentUser={setCurrentUser} />
+   </div>
   );
 }
 

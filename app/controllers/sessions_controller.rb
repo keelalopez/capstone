@@ -1,15 +1,21 @@
 class SessionsController < ApplicationController
 
-    def login
-        # Using find by bc we are looking by username 
-        user = User.find_by(name: params[:name])
+    # ALLOWS FOR CREATE TO WORK WITHOUT BEING AUTHORIZED (needed to signup/login)
+    skip_before_action :authorized, only: :create
 
-        if user&.authenticate(params[:password])
-            #set user to sessions
-            render json: user, status: :ok
-        else
-            render json: {errors: "Invalid Password or Username"}, status: :unauthorized
-        end
+    # /login
+    def create
+        byebug        
+        # Using find by bc we are looking by username 
+        user = User.find_by(username: params[:username])
+        session[:user_id] = user.id
+        render json: user
+    end
+
+    # /logout
+    def destroy
+        session.delete :user_id
+        head :no_content
     end
 
 end
