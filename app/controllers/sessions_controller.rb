@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
     # /login
     def create
+        byebug        
         # Using find by bc we are looking by username 
         user = User.find_by(username: params[:username])
         session[:user_id] = user.id

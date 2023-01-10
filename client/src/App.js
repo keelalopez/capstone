@@ -12,7 +12,8 @@ function App() {
     <p>Hop in, {currentUser}!</p>
     <SignupLoginForms 
       setCurrentUser={setCurrentUser} />
-    <LoginForm />
+    <LoginForm
+      setCurrentUser={setCurrentUser} />
    </div>
   );
 }
