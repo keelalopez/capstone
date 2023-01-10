@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 import SignupLoginForms from './Components/SigupLoginForms.js';
+import LoginForm from './Components/LoginForm.js';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -11,6 +12,7 @@ function App() {
     <p>Hop in, {currentUser}!</p>
     <SignupLoginForms 
       setCurrentUser={setCurrentUser} />
+    <LoginForm />
    </div>
   );
 }
