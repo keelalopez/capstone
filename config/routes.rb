@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
   resources :users
-  # LOGING IN
-  post "/login", to: "sessions#create"
 
+  # CUSTOM ROUTES 
+  post "/login", to: "sessions#create"
+  post "/signup", to: "users#create"
 
 
   # Routing logic: fallback requests for React Router.

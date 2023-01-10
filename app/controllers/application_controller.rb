@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
   include ActionController::Cookies
 
   # Error handling
-  rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_foundrescue_from ActiveRecord::RecordInvalid, with: :render_invalid
+  rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
   rescue_from ActiveRecord::RecordInvalid, with: :render_invalid
 
   private
@@ -15,5 +15,5 @@ class ApplicationController < ActionController::API
   def render_invalid(invalid)
     render json: {errors: ErrorMessageSerializer.error_message(invalid.record.errors)}, status: :unprocessable_entity
   end
-  
+
 end
