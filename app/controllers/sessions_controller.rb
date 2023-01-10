@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
 
+    # ALLOWS FOR CREATE TO WORK WITHOUT BEING AUTHORIZED (needed to signup/login)
+    skip_before_action :authorized, only: :create
+
     # /login
     def create
         # Using find by bc we are looking by username 

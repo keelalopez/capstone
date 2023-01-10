@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+    # ALLOWS FOR CREATE TO WORK WITHOUT BEING AUTHORIZED (needed to signup)
+    skip_before_action :authorized, only: :create
+
     # /signup
     def create
         user = User.create!(user_params)
@@ -8,7 +11,7 @@ class UsersController < ApplicationController
     end
 
     private
-    
+
     def user_params
         params.permit(:username, :name, :password, :password_confirmation)
     end
