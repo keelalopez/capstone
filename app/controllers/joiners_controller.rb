@@ -1,2 +1,0 @@
-class JoinersController < ApplicationController
-end

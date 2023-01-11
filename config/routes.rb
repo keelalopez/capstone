@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :joiners
-  resources :materials
   resources :projects
   resources :users
 
