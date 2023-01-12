@@ -4,7 +4,12 @@ class SessionsController < ApplicationController
     skip_before_action :authorized, only: :create
 
     # /login
+<<<<<<< HEAD
     def create      
+=======
+    def create
+        # byebug        
+>>>>>>> 95f3dab70515a69af1e2c5fd6d8d450438519cd9
         # Using find by bc we are looking by username 
         user = User.find_by(username: params[:username])
         if user&.authenticate(params[:password])
