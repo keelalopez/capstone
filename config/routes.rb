@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   
-<<<<<<< HEAD
-  resources :projects
-=======
   resources :divisions, only: [:index]
   resources :materials, only: [:index]
   resources :projects, only: [:index]
->>>>>>> 95f3dab70515a69af1e2c5fd6d8d450438519cd9
   resources :users
 
   # CUSTOM ROUTES 
