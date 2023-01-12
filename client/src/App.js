@@ -30,13 +30,10 @@ function App() {
     <p>Hop in, {currentUser}!</p>
     
     <Routes>
-      {/* <Route path="/" element={<LandingPage 
-        setCurrentUser={setCurrentUser} />} /> */}
+      <Route path="/" element={<LandingPage 
+        setCurrentUser={setCurrentUser} />} />
       <Route path="/projects" element={<Projects />}/>
     </Routes>
-    <LandingPage />
-
-
    </div>
   );
 }
