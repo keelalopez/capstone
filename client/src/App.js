@@ -1,7 +1,9 @@
 import './App.css';
 import {useEffect, useState} from 'react';
+// import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import SignupLoginForms from './Components/SigupLoginForms.js';
 import LoginForm from './Components/LoginForm.js';
+import Projects from './Components/Projects.js';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -30,6 +32,7 @@ function App() {
       setCurrentUser={setCurrentUser} />
     <LoginForm
       setCurrentUser={setCurrentUser} />
+    <Projects />
    </div>
   );
 }
