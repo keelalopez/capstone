@@ -8,20 +8,20 @@ function App() {
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
 
-  // TESTING FETCHING PROJECTS
+  // FETCHING PROJECTS ✅
   useEffect(() => {
     fetch("/projects")
     .then(res => res.json())
     .then(setProjects)
   }, [])
 
-  // Testing fetching materials
+  // FETCHING MATERIALS ✅
   useEffect(() => {
     fetch("/materials")
     .then(res => res.json())
     .then(setMaterials)
   }, [])
-  console.log(materials)
+
   return (
    <div className="App">
     <p>hellow world</p>
