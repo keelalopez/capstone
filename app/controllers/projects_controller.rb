@@ -1,4 +1,9 @@
 class ProjectsController < ApplicationController
-    has_many :materials
-    has_many :divisions, through: :materials
+
+    skip_before_action :authorized, only: [:index]
+
+    def index
+        user = User.find(session[:user_id])
+        render json: user.projects, status: :ok
+    end
 end

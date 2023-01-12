@@ -3,4 +3,5 @@ class Project < ApplicationRecord
 
     has_many :materials
     has_many :divisions, through: :materials
+
 end

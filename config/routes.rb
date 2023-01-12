@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :divisions
-  resources :materials
-  resources :projects
+  resources :divisions, only: [:index]
+  resources :materials, only: [:index]
+  resources :projects, only: [:index]
   resources :users
 
   # CUSTOM ROUTES 
