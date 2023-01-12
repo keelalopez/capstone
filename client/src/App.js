@@ -1,8 +1,9 @@
 import './App.css';
 import {useEffect, useState} from 'react';
 import { Routes, Route} from 'react-router-dom';
-import SignupLoginForms from './Components/SigupLoginForms.js';
-import LoginForm from './Components/LoginForm.js';
+// import SignupLoginForms from './Components/SigupLoginForms.js';
+// import LoginForm from './Components/LoginForm.js';
+import LandingPage from './Components/LandingPage.js';
 import Projects from './Components/Projects.js';
 
 function App() {
@@ -26,13 +27,16 @@ function App() {
 
   return (
    <div className="App">
-    <p>hellow world</p>
     <p>Hop in, {currentUser}!</p>
-    <SignupLoginForms 
-      setCurrentUser={setCurrentUser} />
-    <LoginForm
-      setCurrentUser={setCurrentUser} />
-    <Projects />
+    
+    <Routes>
+      {/* <Route path="/" element={<LandingPage 
+        setCurrentUser={setCurrentUser} />} /> */}
+      <Route path="/projects" element={<Projects />}/>
+    </Routes>
+    <LandingPage />
+
+
    </div>
   );
 }
