@@ -6,7 +6,7 @@ import LoginForm from './Components/LoginForm.js';
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
   const [projects, setProjects] = useState([])
-  const [materials, setMaterialss] = useState([])
+  const [materials, setMaterials] = useState([])
 
   // TESTING FETCHING PROJECTS
   useEffect(() => {
