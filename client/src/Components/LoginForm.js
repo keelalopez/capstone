@@ -1,9 +1,10 @@
 import {useState} from 'react';
+import { Divider, Header, Container, Form, Input, Button, Image, Segment } from 'semantic-ui-react';
 
 function LoginForm ({setCurrentUser}) {
 
     const [user, setUser] = useState({
-        username: "testing",
+        username: "",
         password: ""
     })
 
@@ -36,24 +37,28 @@ function LoginForm ({setCurrentUser}) {
 
     return (
         <div id="login-container">
-            <p>Log In</p>
-            <div id="login-form">
-                <form onSubmit={handleSubmit}>
-                    Username: <input
-                        type="username"
+            <Container id="login-container">
+                <h2 className="ui header">Log in</h2>
+                <Form size={'tiny'} onSubmit={handleSubmit}>
+                    <Form.Field
+                        control={Input}
+                        placeholder="Username"
                         name="username"
+                        width={6}
                         value={user.username}
                         onChange={handleChange}
                         />
-                    password: <input
-                        type="password"
+                    <Form.Field
+                        control={Input}
+                        placeholder="Password"
                         name="password"
+                        width={6}
                         value={user.password}
                         onChange={handleChange}
                         />
-                    <input type="submit" />
-                </form>
-            </div>
+                    <Button type="submit">Submit</Button>
+                </Form>
+            </Container>
         </div>
     )
 }

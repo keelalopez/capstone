@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* ------------------------- FORMS ------------------------- */
+
+.sign-in-form {
+  background-color: pink;
+  align-items: center;
+  padding: 3em;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#login-container form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

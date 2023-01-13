@@ -37,9 +37,9 @@ function App() {
 
   // FETCHING PROJECTS ✅
   useEffect(() => {
-    // fetch("/projects")
-    // .then(res => res.json())
-    // .then(setProjects)
+    fetch("/projects")
+    .then(res => res.json())
+    .then(setProjects)
   }, [])
 
   // FETCHING MATERIALS ✅
