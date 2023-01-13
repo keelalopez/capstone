@@ -1,8 +1,6 @@
 import './App.css';
 import {useEffect, useState} from 'react';
 import { Routes, Route} from 'react-router-dom';
-// import SignupLoginForms from './Components/SigupLoginForms.js';
-// import LoginForm from './Components/LoginForm.js';
 import LandingPage from './Components/LandingPage.js';
 import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
@@ -38,9 +36,9 @@ function App() {
 
   // FETCHING PROJECTS ✅
   useEffect(() => {
-    fetch("/projects")
-    .then(res => res.json())
-    .then(setProjects)
+    // fetch("/projects")
+    // .then(res => res.json())
+    // .then(setProjects)
   }, [])
 
   // FETCHING MATERIALS ✅
@@ -56,6 +54,7 @@ function App() {
     .then(res => res.json())
     .then(setDivisions)
   }, [])
+
 
   return (
    <div className="App">

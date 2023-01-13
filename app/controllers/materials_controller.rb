@@ -1,6 +1,6 @@
 class MaterialsController < ApplicationController
     def index
-        # byebug
+        byebug
         materials = Material.all
         render json: materials, status: :ok
     end
