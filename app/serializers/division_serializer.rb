@@ -1,3 +1,3 @@
 class DivisionSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :number
 end
