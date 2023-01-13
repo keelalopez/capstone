@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage.js';
 import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
+import Header from './Components/Header';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -58,6 +59,7 @@ function App() {
 
   return (
    <div className="App">
+    <Header />
     <p>Hop in, x!</p>
     { currentUser && <button className='ui button' onClick={handleLogOut}>Log Out</button> }
     <Routes>
