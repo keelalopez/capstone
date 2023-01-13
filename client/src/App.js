@@ -6,11 +6,13 @@ import { Routes, Route} from 'react-router-dom';
 import LandingPage from './Components/LandingPage.js';
 import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
+import AllDivisions from './Components/AllDivisions';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
+  const [divisions, setDivisions] = useState([])
 
   // STAY LOGGED IN
   useEffect(() => {
@@ -48,6 +50,13 @@ function App() {
     .then(setMaterials)
   }, [])
 
+  // FETCHING DIVISIONS
+  useEffect(() => {
+    fetch("/divisions")
+    .then(res => res.json())
+    .then(setDivisions)
+  }, [])
+
   return (
    <div className="App">
     <p>Hop in, x!</p>
@@ -59,6 +68,8 @@ function App() {
         projects={projects}/>}/>
       <Route path="/materials" element={<AllMaterials 
         materials={materials} />}/>
+      <Route path="/divisions" element={<AllDivisions 
+        divisions={divisions}/>} />
     </Routes>
    </div>
   );
