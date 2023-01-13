@@ -10,41 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2023_01_11_200933) do
-=======
 ActiveRecord::Schema.define(version: 2023_01_11_220250) do
->>>>>>> 95f3dab70515a69af1e2c5fd6d8d450438519cd9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "joiners", force: :cascade do |t|
-    t.integer "project_id"
-    t.integer "material_id"
-=======
   create_table "divisions", force: :cascade do |t|
     t.integer "number"
     t.string "name"
->>>>>>> 95f3dab70515a69af1e2c5fd6d8d450438519cd9
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "materials", force: :cascade do |t|
     t.string "name"
-<<<<<<< HEAD
-    t.integer "division"
-    t.string "installation_date"
-    t.string "subcontractor"
-    t.string "notes"
-    t.string "submittal_status"
-=======
     t.string "status"
     t.integer "project_id"
     t.integer "division_id"
->>>>>>> 95f3dab70515a69af1e2c5fd6d8d450438519cd9
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
