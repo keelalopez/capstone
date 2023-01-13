@@ -36,7 +36,7 @@ function LoginForm ({setCurrentUser}) {
 
     return (
         <div id="login-container">
-            <p>Hellow from log in form component</p>
+            <p>Log In</p>
             <div id="login-form">
                 <form onSubmit={handleSubmit}>
                     Username: <input
