@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # CUSTOM ROUTES 
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
-  post "/logout", to: "sessions#destroy"
+  delete "/logout", to: "sessions#destroy"
 
 
   # Routing logic: fallback requests for React Router.
