@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
     # ALLOWS FOR CREATE TO WORK WITHOUT BEING AUTHORIZED (needed to signup)
     skip_before_action :authorized, only: :create
+    # ALLOWS FOR PARAMS TO NOT BE DOUBLED UP
+    wrap_parameters format: []
 
     # /signup
     def create

@@ -11,15 +11,15 @@ function App() {
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
 
-    // STAY LOGGED IN
-  // useEffect(() => {
-  //   fetch("/me")
-  //   .then(res => {
-  //     if(res.ok){
-  //       res.json().then(user => {setCurrentUser(user)})
-  //     }
-  //   })
-  // }, [])
+  // STAY LOGGED IN
+  useEffect(() => {
+    fetch("/me")
+    .then(res => {
+      if(res.ok){
+        res.json().then(data => setCurrentUser(data))
+      }
+    })
+  }, [])
 
   // HANDLE LOG OUT
   const handleLogOut = () => {
@@ -46,10 +46,10 @@ function App() {
     .then(res => res.json())
     .then(setMaterials)
   }, [])
-
+  console.log(materials, projects)
   return (
    <div className="App">
-    <p>Hop in, {currentUser}!</p>
+    <p>Hop in, x!</p>
     { currentUser && <button onClick={handleLogOut}>Log Out</button> }
     <Routes>
       <Route path="/" element={<LandingPage 
