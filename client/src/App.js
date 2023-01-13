@@ -2,22 +2,25 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import { Routes, Route} from 'react-router-dom';
 import LandingPage from './Components/LandingPage.js';
-import Projects from './Components/Projects.js';
+import AllProjects from './Components/AllProjects.js';
+import AllMaterials from './Components/AllMaterials';
+import AllDivisions from './Components/AllDivisions';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
+  const [divisions, setDivisions] = useState([])
 
-    // STAY LOGGED IN
-  // useEffect(() => {
-  //   fetch("/me")
-  //   .then(res => {
-  //     if(res.ok){
-  //       res.json().then(user => {setCurrentUser(user)})
-  //     }
-  //   })
-  // }, [])
+  // STAY LOGGED IN
+  useEffect(() => {
+    fetch("/me")
+    .then(res => {
+      if(res.ok){
+        res.json().then(data => setCurrentUser(data))
+      }
+    })
+  }, [])
 
   // HANDLE LOG OUT
   const handleLogOut = () => {
@@ -45,15 +48,27 @@ function App() {
     .then(setMaterials)
   }, [])
 
+  // FETCHING DIVISIONS
+  useEffect(() => {
+    fetch("/divisions")
+    .then(res => res.json())
+    .then(setDivisions)
+  }, [])
+
 
   return (
    <div className="App">
-    <p>Hop in, {currentUser}!</p>
+    <p>Hop in, x!</p>
     { currentUser && <button onClick={handleLogOut}>Log Out</button> }
     <Routes>
       <Route path="/" element={<LandingPage 
         setCurrentUser={setCurrentUser} />} />
-      <Route path="/projects" element={<Projects />}/>
+      <Route path="/projects" element={<AllProjects 
+        projects={projects}/>}/>
+      <Route path="/materials" element={<AllMaterials 
+        materials={materials} />}/>
+      <Route path="/divisions" element={<AllDivisions 
+        divisions={divisions}/>} />
     </Routes>
    </div>
   );
