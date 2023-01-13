@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import ProjectElement from './ProjectElement';
 
-function Projects ({projects}) {
-    console.log("from projects component", projects)
+function AllProjects ({projects}) {
+    // console.log("from projects component", projects)
 
     const projectsArray = projects.map(eachProject => {
         return (<ProjectElement {...eachProject} key={eachProject.id} />)
@@ -16,4 +16,4 @@ function Projects ({projects}) {
     )
 }
 
-export default Projects;
+export default AllProjects;

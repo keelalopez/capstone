@@ -4,7 +4,8 @@ import { Routes, Route} from 'react-router-dom';
 // import SignupLoginForms from './Components/SigupLoginForms.js';
 // import LoginForm from './Components/LoginForm.js';
 import LandingPage from './Components/LandingPage.js';
-import Projects from './Components/Projects.js';
+import AllProjects from './Components/AllProjects.js';
+import AllMaterials from './Components/AllMaterials';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -46,7 +47,7 @@ function App() {
     .then(res => res.json())
     .then(setMaterials)
   }, [])
-  
+
   return (
    <div className="App">
     <p>Hop in, x!</p>
@@ -54,8 +55,10 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage 
         setCurrentUser={setCurrentUser} />} />
-      <Route path="/projects" element={<Projects 
+      <Route path="/projects" element={<AllProjects 
         projects={projects}/>}/>
+      <Route path="/materials" element={<AllMaterials 
+        materials={materials} />}/>
     </Routes>
    </div>
   );
