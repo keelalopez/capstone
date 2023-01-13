@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { Divider, Header, Container, Form, Input, Button  } from 'semantic-ui-react';
 
 function SignupLoginForms({setCurrentUser}) {
     // STATE FOR HARNESSING NEW USER INFO FROM FORM
@@ -40,32 +41,40 @@ function SignupLoginForms({setCurrentUser}) {
 
     return (
         <div id="signup-container">
-            <p>Sign Up</p>
-            <div id="signup-form">
-                <form  onSubmit={handleSignup}>
-                    Username: <input 
-                        type="username"
+            <h2 className="ui header">Sign up</h2>
+            <Container id="signup-container">
+                <Form size={'tiny'} onSubmit={handleSignup}>
+                    <Form.Field
+                        width={7}
+                        control={Input} 
+                        placeholder="Username"
                         name="username"
                         value={newUser.username}
                         onChange={handleChange}/>
-                    Name: <input 
-                        type="name"
+                    <Form.Field 
+                        width={7}
+                        control={Input} 
+                        placeholder="Name"
                         name="name"
                         value={newUser.name}
                         onChange={handleChange}/>
-                    Password: <input
-                        type="password"
+                    <Form.Field
+                        width={7}
+                        control={Input} 
+                        placeholder="Password"
                         name="password"
                         value={newUser.password} 
                         onChange={handleChange}/>
-                    Confirm Password: <input 
-                        type="password"
+                    <Form.Field 
+                        width={7}
+                        control={Input} 
+                        placeholder="Confirm Password"
                         name="password_confirmation"
                         value={newUser.password_confirmation}
                         onChange={handleChange}/>
-                    <input type="submit"/>
-                </form>
-            </div>
+                    <Button type="submit" size='tiny'>Submit</Button>
+                </Form>
+            </Container>
         </div>
     )
 }

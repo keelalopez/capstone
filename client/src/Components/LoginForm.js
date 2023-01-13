@@ -44,7 +44,7 @@ function LoginForm ({setCurrentUser}) {
                         control={Input}
                         placeholder="Username"
                         name="username"
-                        width={6}
+                        width={7}
                         value={user.username}
                         onChange={handleChange}
                         />
@@ -52,11 +52,11 @@ function LoginForm ({setCurrentUser}) {
                         control={Input}
                         placeholder="Password"
                         name="password"
-                        width={6}
+                        width={7}
                         value={user.password}
                         onChange={handleChange}
                         />
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit" size='tiny'>Submit</Button>
                 </Form>
             </Container>
         </div>
