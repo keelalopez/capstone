@@ -46,7 +46,7 @@ function App() {
     .then(res => res.json())
     .then(setMaterials)
   }, [])
-  console.log(materials, projects)
+  
   return (
    <div className="App">
     <p>Hop in, x!</p>
@@ -54,7 +54,8 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage 
         setCurrentUser={setCurrentUser} />} />
-      <Route path="/projects" element={<Projects />}/>
+      <Route path="/projects" element={<Projects 
+        projects={projects}/>}/>
     </Routes>
    </div>
   );
