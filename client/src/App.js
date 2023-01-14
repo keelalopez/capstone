@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage.js';
 import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
+import Header from './Components/Header';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -36,9 +37,9 @@ function App() {
 
   // FETCHING PROJECTS ✅
   useEffect(() => {
-    // fetch("/projects")
-    // .then(res => res.json())
-    // .then(setProjects)
+    fetch("/projects")
+    .then(res => res.json())
+    .then(setProjects)
   }, [])
 
   // FETCHING MATERIALS ✅
@@ -58,8 +59,9 @@ function App() {
 
   return (
    <div className="App">
+    <Header />
     <p>Hop in, x!</p>
-    { currentUser && <button onClick={handleLogOut}>Log Out</button> }
+    { currentUser && <button className='ui button' onClick={handleLogOut}>Log Out</button> }
     <Routes>
       <Route path="/" element={<LandingPage 
         setCurrentUser={setCurrentUser} />} />
