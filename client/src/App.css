@@ -37,14 +37,22 @@
   }
 }
 
-/* ------------------------- FORMS ------------------------- */
+/* ------------------------- LANDING PAGE ------------------------- */
 
 .sign-in-form {
-  background-color: pink;
+  background-color: rgb(145, 151, 174);
   /* align-items: center; */
   padding: 3em;
   border-radius: 8px;
   margin: 20px;
+}
+.about {
+  /* background-color: rgb(145, 151, 174); */
+  /* align-items: center; */
+  padding: 3em;
+  border-radius: 8px;
+  margin: 20px;
+  height: 400px;
 }
 
 #login-container form {

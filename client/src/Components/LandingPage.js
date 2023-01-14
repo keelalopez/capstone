@@ -18,7 +18,9 @@ function LandingPage () {
                     </Grid.Column>
                     
                     <Grid.Column width={8}>
-                        <About />
+                        <div className="about">
+                            <About />
+                        </div>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

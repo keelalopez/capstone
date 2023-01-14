@@ -63,6 +63,7 @@ function SignupLoginForms({setCurrentUser}) {
                         control={Input} 
                         placeholder="Password"
                         name="password"
+                        type="password"
                         value={newUser.password} 
                         onChange={handleChange}/>
                     <Form.Field 
@@ -70,6 +71,7 @@ function SignupLoginForms({setCurrentUser}) {
                         control={Input} 
                         placeholder="Confirm Password"
                         name="password_confirmation"
+                        type="password"
                         value={newUser.password_confirmation}
                         onChange={handleChange}/>
                     <Button type="submit" size='tiny'>Submit</Button>

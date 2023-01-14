@@ -51,6 +51,7 @@ function LoginForm ({setCurrentUser}) {
                     <Form.Field
                         control={Input}
                         placeholder="Password"
+                        type="password"
                         name="password"
                         width={7}
                         value={user.password}
