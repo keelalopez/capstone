@@ -5,7 +5,7 @@ function ProjectElement ({name}) {
 
 
     return (
-        <div className="projects">
+        <div className="project">
             <Card>
                 <Card.Content header={name} />
                 <Card.Content extra>

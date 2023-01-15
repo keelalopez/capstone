@@ -59,9 +59,8 @@ function App() {
 
   return (
    <div className="App">
-    <Header />
-    <p>Hop in, x!</p>
-    { currentUser && <button className='ui button' onClick={handleLogOut}>Log Out</button> }
+    <Header currentUser={currentUser} handleLogOut={handleLogOut}/>
+    
     <Routes>
       <Route path="/" element={<LandingPage 
         setCurrentUser={setCurrentUser} />} />

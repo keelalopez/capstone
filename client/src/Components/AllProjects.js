@@ -10,8 +10,8 @@ function AllProjects ({projects}) {
     })
 
     return (
-        <div>
-            <p>Hellow from Projects component</p>
+        <div className="all-projects">
+            <h1>Projects</h1>
             <Grid  relaxed columns={3}> 
                 {projects.map(eachProject => (
                     <Grid.Column>
