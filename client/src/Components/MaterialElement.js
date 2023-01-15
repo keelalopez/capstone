@@ -1,8 +1,15 @@
+import { Table } from "semantic-ui-react";
 
 function MaterialElement ({name}) {
 
     return (
-        <div>material name: {name}</div>
+        <>
+            <Table.Body>
+                <Table.Row>
+                    <Table.Cell>{name}</Table.Cell>
+                </Table.Row>
+            </Table.Body>
+        </>
     )
 }
 

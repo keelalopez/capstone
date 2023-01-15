@@ -1,4 +1,5 @@
 import MaterialElement from "./MaterialElement";
+import { Container, Table } from 'semantic-ui-react';
 
 function AllMaterials ({materials}) {
     const materialsArray = materials.map(eachMaterial => {
@@ -10,7 +11,17 @@ function AllMaterials ({materials}) {
     return (
         <div>
             <h2>All Materials Here</h2>
-            {materialsArray}
+            <Container>
+                <Table>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Material</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+                    {materialsArray}
+                </Table>
+            </Container>
+
         </div>
     )
 }
