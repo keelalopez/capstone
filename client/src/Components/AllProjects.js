@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import ProjectElement from './ProjectElement';
+import { Grid } from 'semantic-ui-react';
 
 function AllProjects ({projects}) {
     // console.log("from projects component", projects)
@@ -11,7 +12,13 @@ function AllProjects ({projects}) {
     return (
         <div>
             <p>Hellow from Projects component</p>
-            {projectsArray}
+            <Grid  relaxed columns={3}> 
+                {projects.map(eachProject => (
+                    <Grid.Column>
+                        <ProjectElement {...eachProject} key={eachProject.id} />
+                    </Grid.Column>
+                ))}  
+            </Grid>
         </div>
     )
 }
