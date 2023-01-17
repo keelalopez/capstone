@@ -16,6 +16,13 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
         })
     }
 
+    // CANCEL BUTTON WHEN USER CHANGES THEIR MIND. GOES BACK TO ORIGINAL VALUE
+    const handleCancelEdit = () => {
+        setUpdatedMaterial({
+            status: status
+        })  
+    }
+
     // MATERIAL PATCH 
     const handleEdit = (e) => {
         e.preventDefault();
@@ -68,6 +75,7 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
                             onChange={handleChange}
                         />
                         <Button type="submit" size='tiny'>Submit</Button>
+                        <Button type="submit" size='tiny' onClick={handleCancelEdit}>Cancel</Button>
                     </Form>
                 </Table.Cell>
                 <Table.Cell>0{division.number} {division.name}</Table.Cell>
