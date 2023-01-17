@@ -4,7 +4,7 @@ import { Container, Table, Button, Icon } from 'semantic-ui-react';
 function AllMaterials ({materials}) {
     const materialsArray = materials.map(eachMaterial => {
         return (
-            <MaterialElement {...eachMaterial} key={eachMaterial.id} />
+            <MaterialElement key={eachMaterial.id} {...eachMaterial}  />
         )
     })
 
