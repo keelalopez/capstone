@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Divider, Header, Container, Form, Input, Button, Image, Segment } from 'semantic-ui-react';
+import { Container, Form, Input, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 function LoginForm ({setCurrentUser}) {

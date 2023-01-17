@@ -9,7 +9,7 @@ class MaterialsController < ApplicationController
     end
 
     def update
-        byebug
+        # byebug
         material = Material.find(params[:id])
         material.update(material_params)
         render json: material, status: :ok

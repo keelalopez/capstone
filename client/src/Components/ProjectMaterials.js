@@ -1,4 +1,4 @@
-import { Container, Table, Button, Icon } from 'semantic-ui-react';
+import { Container, Table } from 'semantic-ui-react';
 import MaterialElement from "./MaterialElement";
 
 function ProjectMaterials ({projMaterials}) {

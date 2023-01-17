@@ -1,6 +1,6 @@
-import { Button, Card, Icon} from 'semantic-ui-react'
+import { Button, Card } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
-import {useState} from 'react';
+// import {useState} from 'react';
 
 function ProjectElement ({ id, name, setProjMaterials}) {
     // PROJECTS#SHOW, USE CUSTOM ROUTE
@@ -30,17 +30,3 @@ function ProjectElement ({ id, name, setProjMaterials}) {
 }
 
 export default ProjectElement;
-
-{/* <Button icon>
-    <Icon name="building" />
-</Button>
-<Button icon>
-    <Icon name="dolly flatbed" />
-</Button> */}
-
-{/* <Button animated>
-    <Button.Content visible>
-        <Icon name='dolly' />
-    </Button.Content>
-    <Button.Content hidden>Materials</Button.Content>
-</Button> */}
