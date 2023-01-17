@@ -1,3 +1,3 @@
 class MaterialSerializer < ActiveModel::Serializer
-  attributes :id, :name, :status, :division
+  attributes :id, :name, :status, :division, :project
 end
