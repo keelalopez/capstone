@@ -2,7 +2,7 @@ import { Form, Input, Button } from 'semantic-ui-react';
 import { Table } from "semantic-ui-react";
 import { useState } from 'react';
 
-function MaterialElement ({id, name, status, division, project}) {
+function MaterialElement ({id, name, status, division, project, setMaterialTracker}) {
     const [displayForms, setDisplayForms] = useState(false);
     const [updatedMaterial, setUpdatedMaterial] = useState({
         status: "",
@@ -24,6 +24,14 @@ function MaterialElement ({id, name, status, division, project}) {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(updatedMaterial)
+        })
+        .then(res => {
+            if (res.ok){
+                res.json()
+                .then(setMaterialTracker)
+            } else {
+                res.json().then(console.log("beep beep problem beep"))
+            }
         })
     }
     

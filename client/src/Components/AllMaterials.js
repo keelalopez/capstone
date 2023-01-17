@@ -1,11 +1,11 @@
 import MaterialElement from "./MaterialElement";
 import { Container, Table, Button, Icon } from 'semantic-ui-react';
 
-function AllMaterials ({materials}) {
+function AllMaterials ({materials, setMaterialTracker}) {
     // WILL MAP THROUGH LIST OF ALL MATERIALS AND RENDER IN TABLE
     const materialsArray = materials.map(eachMaterial => {
         return (
-            <MaterialElement key={eachMaterial.id} {...eachMaterial}  />
+            <MaterialElement key={eachMaterial.id} {...eachMaterial} setMaterialTracker={setMaterialTracker} />
         )
     })
 

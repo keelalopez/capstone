@@ -12,6 +12,9 @@ function App() {
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
+  
+  // USED TO RENDER AUTOMATICALLY AFTER DELETING OR EDITING MATERIAL
+  const [materialTracker, setMaterialTracker] = useState([])
 
   // STAY LOGGED IN
   useEffect(() => {
@@ -47,7 +50,7 @@ function App() {
     fetch("/materials")
     .then(res => res.json())
     .then(setMaterials)
-  }, [])
+  }, [materialTracker])
 
   // FETCHING DIVISIONS
   useEffect(() => {
@@ -67,6 +70,7 @@ function App() {
       <Route path="/projects" element={<AllProjects 
         projects={projects}/>}/>
       <Route path="/materials" element={<AllMaterials 
+        setMaterialTracker={setMaterialTracker}
         materials={materials} />}/>
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
