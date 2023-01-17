@@ -16,6 +16,8 @@ function AllMaterials ({materials}) {
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Material</Table.HeaderCell>
+                            <Table.HeaderCell>Status</Table.HeaderCell>
+                            <Table.HeaderCell>Division</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     {materialsArray}
