@@ -1,14 +1,16 @@
 import { Form, Input, Button } from 'semantic-ui-react';
 import { Table } from "semantic-ui-react";
 import { useState } from 'react';
+// import AddMaterial from './AddMaterial.js'
 
 function MaterialElement ({id, name, status, division, project, setMaterialTracker}) {
-    const [displayForms, setDisplayForms] = useState(false);
+    const [displayEditForms, setDisplayEditForms] = useState(false);
+    // const [addMaterialForm, setAddMaterialForm] = useState(false);
     const [updatedMaterial, setUpdatedMaterial] = useState({
         status: "",
     })
 
-    // HANDLE CHANGE FOR EDIT
+    // HANDLE CHANGE FOR EDIT TO STORE IN STATE
     const handleChange = (e) => {
         setUpdatedMaterial({
             ...updatedMaterial, 
@@ -26,7 +28,7 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
     // MATERIAL PATCH 
     const handleEdit = (e) => {
         e.preventDefault();
-        setDisplayForms(!displayForms);
+        setDisplayEditForms(!displayEditForms);
         fetch(`/materials/${id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
@@ -41,10 +43,22 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
             }
         })
     }
+
+    // MATERIAL DELETE
+    const handleDelete = () => {
+        fetch(`/materials/${id}`, {
+            method:"DELETE"
+        })
+        .then(res => {
+            if(res.ok){
+                res.json().then(setMaterialTracker)
+            }
+        })
+    }
     
     return (
         <>
-        { !displayForms ? 
+        { !displayEditForms ? 
             <Table.Body>
                 <Table.Row>
                     <Table.Cell>{name}</Table.Cell>
@@ -56,7 +70,7 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
                             <i className="pencil alternate icon" onClick={handleEdit}></i>
                         </div>
                         <div className="mini ui icon button">
-                            <i className="trash icon" ></i>
+                            <i className="trash icon" onClick={handleDelete}></i>
                         </div>
                     </Table.Cell>
                 </Table.Row>

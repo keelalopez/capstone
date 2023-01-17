@@ -2,7 +2,7 @@ import { Container, Table } from 'semantic-ui-react';
 import MaterialElement from "./MaterialElement";
 
 function ProjectMaterials ({projMaterials}) {
-    console.log(projMaterials.materials)
+    // console.log(projMaterials.materials)
     const materialsArray = projMaterials.materials.map(eachMaterial => {
         return (
             <MaterialElement key={eachMaterial.id} {...eachMaterial}  />

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "users#show"
 
+  post "/add-material", to: "materials#create"
 
 
   # Routing logic: fallback requests for React Router.
