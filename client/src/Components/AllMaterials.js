@@ -1,5 +1,5 @@
 import MaterialElement from "./MaterialElement";
-import { Container, Table } from 'semantic-ui-react';
+import { Container, Table, Button, Icon } from 'semantic-ui-react';
 
 function AllMaterials ({materials}) {
     const materialsArray = materials.map(eachMaterial => {
@@ -12,7 +12,7 @@ function AllMaterials ({materials}) {
         <div>
             <h2>All Materials Here</h2>
             <Container>
-                <Table>
+                <Table celled selectable>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Material</Table.HeaderCell>
@@ -21,6 +21,23 @@ function AllMaterials ({materials}) {
                         </Table.Row>
                     </Table.Header>
                     {materialsArray}
+                    <Table.Footer fullWidth>
+                        <Table.Row>
+                            <Table.HeaderCell />
+                            <Table.HeaderCell colSpan='4'>
+                            <Button
+                                floated='right'
+                                icon
+                                labelPosition='left'
+                                primary
+                                size='small'
+                            >
+                                <Icon name='plus' /> Add Material
+                            </Button>
+                            <Button size='small'>Edit</Button>
+                            </Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Footer>
                 </Table>
             </Container>
 
