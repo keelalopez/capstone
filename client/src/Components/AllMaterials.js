@@ -1,8 +1,9 @@
-import MaterialElement from "./MaterialElement";
 import { Container, Table, Button, Icon } from 'semantic-ui-react';
 import { Link, useNavigate } from 'react-router-dom';
+import MaterialElement from "./MaterialElement";
+import AddMaterial from "./AddMaterial";
 
-function AllMaterials ({materials, setMaterialTracker}) {
+function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
     // WILL MAP THROUGH LIST OF ALL MATERIALS AND RENDER IN TABLE
     const materialsArray = materials.map(eachMaterial => {
         return (
@@ -12,7 +13,11 @@ function AllMaterials ({materials, setMaterialTracker}) {
 
     // MATERIALS#CREATE
     // const handleNewMaterialRedirect = () => {
-    //     console.log("ouchie")
+    //     return (
+    //         <div>
+    //             <AddMaterial />
+    //         </div>
+    //     )
     // }
 
     return (

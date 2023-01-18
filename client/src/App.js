@@ -76,6 +76,7 @@ function App() {
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
       <Route path="/add-material" element={<AddMaterial 
+        projects={projects}
         divisions={divisions}/>} />
     </Routes>
    </div>

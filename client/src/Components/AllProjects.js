@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import ProjectElement from './ProjectElement';
 import { Grid } from 'semantic-ui-react';
+import ProjectElement from './ProjectElement';
 import ProjectMaterials from './ProjectMaterials';
 
 function AllProjects ({projects}) {
