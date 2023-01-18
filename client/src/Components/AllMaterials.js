@@ -1,7 +1,6 @@
 import { Container, Table, Button, Icon } from 'semantic-ui-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MaterialElement from "./MaterialElement";
-import AddMaterial from "./AddMaterial";
 
 function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
     // WILL MAP THROUGH LIST OF ALL MATERIALS AND RENDER IN TABLE

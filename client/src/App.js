@@ -14,7 +14,7 @@ function App() {
   const [materials, setMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
   
-  // USED TO RENDER AUTOMATICALLY AFTER DELETING OR EDITING MATERIAL
+  // USED TO RENDER AUTOMATICALLY MATERIAL CRUD
   const [materialTracker, setMaterialTracker] = useState([])
 
   // STAY LOGGED IN

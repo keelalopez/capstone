@@ -9,10 +9,12 @@ function AllDivisions ({divisions}) {
     })
 
     return (
-        <div>
+        <>
             <h1>All Divisions</h1>
-            {divisionsArray}
-        </div>
+            <div className="divisions-container">
+                {divisionsArray}
+            </div>
+        </>
     )
 }
 
