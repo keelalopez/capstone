@@ -15,6 +15,13 @@ class MaterialsController < ApplicationController
         render json: material, status: :ok
     end
 
+    def destroy
+        # byebug
+        material = Material.find(params[:id])
+        material.destroy
+        render json: material, status: :ok
+    end
+
     private
 
     def material_params

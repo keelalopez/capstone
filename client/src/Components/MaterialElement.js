@@ -52,6 +52,8 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
         .then(res => {
             if(res.ok){
                 res.json().then(setMaterialTracker)
+            } else {
+                res.json().then("cannot be deleted")
             }
         })
     }
