@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Divider, Header, Container, Form, Input, Button  } from 'semantic-ui-react';
+import { Container, Form, Input, Button } from 'semantic-ui-react';
 
 function SignupLoginForms({setCurrentUser}) {
     // STATE FOR HARNESSING NEW USER INFO FROM FORM

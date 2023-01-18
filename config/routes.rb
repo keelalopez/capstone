@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   resources :divisions, only: [:index]
-  resources :materials, only: [:index]
-  resources :projects, only: [:index]
+  resources :materials, only: [:index, :update, :destroy]
+  resources :projects, only: [:index, :show]
   resources :users
 
   # CUSTOM ROUTES 
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "users#show"
+
+  post "/add-material", to: "materials#create"
 
 
   # Routing logic: fallback requests for React Router.
