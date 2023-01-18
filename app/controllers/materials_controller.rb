@@ -10,6 +10,15 @@ class MaterialsController < ApplicationController
 
     def create
         # byebug
+        project = Project.find(params[:project_id])
+        division = Division.find(params[:division_id])
+        material = Material.create(
+            name: params[:name],
+            status: params[:status],
+            project_id: project.id,
+            division_id: division.id
+        )
+        render json: material, status: :created
     end
 
     def update

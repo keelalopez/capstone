@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :divisions, only: [:index]
-  resources :materials, only: [:index, :update, :destroy]
+  resources :materials, only: [:index, :create, :update, :destroy]
   resources :projects, only: [:index, :show]
   resources :users
 
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "users#show"
 
-  get "/add-material", to: "materials#create"
+  # post "/add-material", to: "materials#create"
 
 
   # Routing logic: fallback requests for React Router.

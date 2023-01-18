@@ -36,15 +36,19 @@ function AddMaterial ({divisions, projects}) {
     }
  
     // MATERIALS#CREATE
-    // const handleMaterialPost = (e) => {
-    //     e.preventDefault();
-    //     fetch()
-    // }
+    const handleMaterialPost = (e) => {
+        e.preventDefault();
+        fetch("/materials", {
+            method: "POST",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(newMaterial)
+        })
+    }
 
     return (
         <div id="add-material-container">
             <h2>New Material Form</h2>
-            <form>
+            <form onSubmit={handleMaterialPost}>
                 <label>Material Name</label>
                 <input 
                     label="Material Name"
@@ -84,6 +88,7 @@ function AddMaterial ({divisions, projects}) {
                     <option value="">Select</option>
                     {projectOptions}
                 </select>
+                <button>Submit</button>
             </form>
         </div>
     )
