@@ -1,9 +1,10 @@
 
-function DivisionElement ({name}) {
+function DivisionElement ({number, name}) {
 
     return (
         <div className="division-card">
-            <h3>{name}</h3>
+            <h3>0{number} {name}</h3>
+
         </div>
     )
 }
