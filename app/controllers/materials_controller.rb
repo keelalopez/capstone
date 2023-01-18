@@ -8,6 +8,10 @@ class MaterialsController < ApplicationController
         render json: materials, status: :ok
     end
 
+    def create
+        # byebug
+    end
+
     def update
         # byebug
         material = Material.find(params[:id])

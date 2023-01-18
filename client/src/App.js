@@ -6,6 +6,7 @@ import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
 import Header from './Components/Header';
+import AddMaterial from './Components/AddMaterial';
 
 function App() {
   const [currentUser, setCurrentUser] = useState("keila")
@@ -73,6 +74,8 @@ function App() {
         setMaterialTracker={setMaterialTracker}
         materials={materials} />}/>
       <Route path="/divisions" element={<AllDivisions 
+        divisions={divisions}/>} />
+      <Route path="/add-material" element={<AddMaterial 
         divisions={divisions}/>} />
     </Routes>
    </div>

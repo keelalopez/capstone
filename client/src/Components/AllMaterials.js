@@ -1,5 +1,6 @@
 import MaterialElement from "./MaterialElement";
 import { Container, Table, Button, Icon } from 'semantic-ui-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function AllMaterials ({materials, setMaterialTracker}) {
     // WILL MAP THROUGH LIST OF ALL MATERIALS AND RENDER IN TABLE
@@ -8,6 +9,11 @@ function AllMaterials ({materials, setMaterialTracker}) {
             <MaterialElement key={eachMaterial.id} {...eachMaterial} setMaterialTracker={setMaterialTracker} />
         )
     })
+
+    // MATERIALS#CREATE
+    // const handleNewMaterialRedirect = () => {
+    //     console.log("ouchie")
+    // }
 
     return (
         <div>
@@ -27,14 +33,17 @@ function AllMaterials ({materials, setMaterialTracker}) {
                     <Table.Footer fullWidth>
                         <Table.Row>
                             <Table.HeaderCell colSpan='5'>
-                                <Button
-                                    floated='right'
-                                    icon
-                                    labelPosition='left'
-                                    primary
-                                    size='small'>
-                                    <Icon name='plus' /> Add Material
-                                </Button>
+                                <Link to="/add-material">
+                                    <Button
+                                        // onClick={handleNewMaterialRedirect}
+                                        floated='right'
+                                        icon
+                                        labelPosition='left'
+                                        primary
+                                        size='small'>
+                                        <Icon name='plus' /> Add Material
+                                    </Button>
+                                </Link>
                             </Table.HeaderCell>
                         </Table.Row>
                     </Table.Footer>
