@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { parsePath } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function AddMaterial ({divisions, projects}) {
+function AddMaterial ({divisions, projects, setMaterialTracker}) {
+    let navigate = useNavigate();
+
+    // STATE OBJECT STORES NEW MATERIAL INFORMATION
     const [newMaterial, setNewMaterial] = useState({
         name: "",
         status: "",
@@ -42,6 +45,14 @@ function AddMaterial ({divisions, projects}) {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(newMaterial)
+        })
+        .then(res => {
+            if(res.ok){
+                res.json().then(data => {
+                    setMaterialTracker(data)
+                    navigate("/materials")
+                })
+            }
         })
     }
 
