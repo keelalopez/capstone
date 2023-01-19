@@ -9,4 +9,7 @@ class Project < ApplicationRecord
     # validates :address, presence: true
     # validates :architect, presence: true
     # validates :completion_date, presence: true
+
+
+
 end
