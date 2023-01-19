@@ -3,17 +3,17 @@ import LoginForm from './LoginForm.js';
 import About from './About.js';
 import { Grid } from 'semantic-ui-react'
 
-function LandingPage () {
+function LandingPage ({setCurrentUser, setProjects}) {
     return (
         <div>
             <Grid  divided>
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <div className="sign-in-form">
-                            <SignupLoginForms />
+                            <SignupLoginForms setCurrentUser={setCurrentUser}/>
                         </div>
                         <div className="sign-in-form">
-                            <LoginForm />
+                            <LoginForm setCurrentUser={setCurrentUser} setProjects={setProjects} />
                         </div>
                     </Grid.Column>
                     

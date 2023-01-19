@@ -9,7 +9,7 @@ import Header from './Components/Header';
 import AddMaterial from './Components/AddMaterial';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState("keila")
+  const [currentUser, setCurrentUser] = useState(null)
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
@@ -22,7 +22,7 @@ function App() {
     fetch("/me")
     .then(res => {
       if(res.ok){
-        res.json().then(data => setCurrentUser(data))
+        res.json().then(setCurrentUser)
       }
     })
   }, [])
@@ -51,22 +51,22 @@ function App() {
     fetch("/materials")
     .then(res => res.json())
     .then(setMaterials)
-  }, [materialTracker])
+  }, [currentUser, materialTracker])
 
   // FETCHING DIVISIONS
   useEffect(() => {
     fetch("/divisions")
     .then(res => res.json())
     .then(setDivisions)
-  }, [])
-
-
+  }, [currentUser])
+  // console.log(currentUser)
   return (
    <div className="App">
     <Header currentUser={currentUser} handleLogOut={handleLogOut}/>
     
     <Routes>
       <Route path="/" element={<LandingPage 
+        setProjects={setProjects}
         setCurrentUser={setCurrentUser} />} />
       <Route path="/projects" element={<AllProjects 
         projects={projects}/>}/>
