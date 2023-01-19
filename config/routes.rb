@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "users#show"
 
+  # CUSTOM ROUTE FOR CUSTOM METHOD 
   get "/users/:id/materials", to: "users#materials_count"
 
 

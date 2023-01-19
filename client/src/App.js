@@ -7,8 +7,11 @@ import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
 import Header from './Components/Header';
 import AddMaterial from './Components/AddMaterial';
+import { Link , useNavigate} from 'react-router-dom';
 
 function App() {
+  let navigate = useNavigate();
+
   const [currentUser, setCurrentUser] = useState(null)
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
@@ -35,6 +38,7 @@ function App() {
     .then(res => {
       if(res.ok){
         setCurrentUser(null)
+        navigate("/")
       }
     })
   }

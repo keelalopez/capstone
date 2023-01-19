@@ -1,6 +1,8 @@
 import { Menu, MenuItem, Icon, Button } from "semantic-ui-react";
 
 function Header ({currentUser, handleLogOut}) {
+    
+
     return (
         <div className="header">
             <Menu>
