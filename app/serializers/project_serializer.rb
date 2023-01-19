@@ -1,5 +1,5 @@
 class ProjectSerializer < ActiveModel::Serializer
-  attributes :id, :name, :address, :completion_date, :architect, :owner, :materials_count
+  attributes :id, :name, :address, :completion_date, :architect, :owner, :materials_count, :pending_count
 
   has_many :materials
   # has_many :divisions, through: :materials

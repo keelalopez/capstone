@@ -14,4 +14,7 @@ class Project < ApplicationRecord
         self.materials.count
     end
 
+    def pending_count
+        self.materials.where(status: "Pending").count
+    end
 end
