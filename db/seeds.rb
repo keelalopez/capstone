@@ -12,6 +12,7 @@ Material.destroy_all
 p1 = Project.create(name: "Rivian Laguna", user_id: 1)
 p2 = Project.create(name: "Huntington Hospital ", user_id: 1)
 p3 = Project.create(name: "Republic Bank", user_id: 1)
+
 p4 = Project.create(name: "Ford Manhattan", user_id: 9)
 p5 = Project.create(name: "Chase Santa Monica", user_id: 9)
 
@@ -39,3 +40,8 @@ m5 = Material.create(name: "Cables", status: "Pending", project_id: p2.id, divis
 
 m6 = Material.create(name: "Tape", status: "Pending", project_id: p3.id, division_id: d2.id)
 m7 = Material.create(name: "C Channels", status: "Pending", project_id: p3.id, division_id: d4.id)
+
+m8 = Material.create(name: "Wood Doors", status: "Pending", project_id: p4.id, division_id: d5.id)
+m9 = Material.create(name: "Metal Ducts", status: "Pending", project_id: p4.id, division_id: d13.id)
+m10 = Material.create(name: "Metal Doors", status: "Pending", project_id: p5.id, division_id: d5.id)
+m11 = Material.create(name: "Pipe", status: "Pending", project_id: p5.id, division_id: d12.id)
