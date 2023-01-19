@@ -1,5 +1,6 @@
 import { Container, Table } from 'semantic-ui-react';
-import MaterialElement from "./MaterialElement";
+// import ProjectMaterialElement from "./ProjectMaterialElement";
+import MaterialElement from './MaterialElement';
 
 function ProjectMaterials ({projMaterials}) {
     // console.log(projMaterials.materials)
@@ -8,7 +9,12 @@ function ProjectMaterials ({projMaterials}) {
             <MaterialElement key={eachMaterial.id} {...eachMaterial}  />
         )
     })
-
+// console.log(materialsArray)
+//    console.log(projMaterials[0].division.name) THIS WORKS
+    // const test = projMaterials.map(m => {
+    //     console.log(m)
+    // })
+    
     return (
         <div>
             <h2>{projMaterials.name} Materials</h2>

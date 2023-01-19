@@ -44,14 +44,14 @@ function App() {
     fetch("/projects")
     .then(res => res.json())
     .then(setProjects)
-  }, [])
+  }, [materialTracker])
 
   // FETCHING MATERIALS ✅
   useEffect(() => {
     fetch("/materials")
     .then(res => res.json())
     .then(setMaterials)
-  }, [currentUser, materialTracker])
+  }, [currentUser, materialTracker, projects])
 
   // FETCHING DIVISIONS
   useEffect(() => {

@@ -7,9 +7,12 @@ function ProjectElement ({ id, name, setProjMaterials}) {
     const handleProjMaterials = () => {
         fetch(`/projects/${id}`)
         .then(res => res.json())
-        .then(setProjMaterials)
+        .then(data => {
+            setProjMaterials(data)
+            // console.log(data.materials)
+        })
     }
-
+    // .then(data => {setProjMaterials(data)})
     // console.log(projMaterials.materials)
     return (
         <div className="project">

@@ -5,7 +5,7 @@ import ProjectMaterials from './ProjectMaterials';
 
 function AllProjects ({projects}) {
     const [projMaterials, setProjMaterials] = useState([])
-    // console.log(projMaterials.materials)
+ 
     return (
         <div className="all-projects">
             <h1>Projects</h1>
