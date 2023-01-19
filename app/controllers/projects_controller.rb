@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-    skip_before_action :authorized, only: [:index]
+    # skip_before_action :authorized, only: [:index]
 
     def index
         # byebug

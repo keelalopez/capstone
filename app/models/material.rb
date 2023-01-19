@@ -4,5 +4,9 @@ class Material < ApplicationRecord
 
     validates :name, presence: true
     validates :status, presence: true
+
+    # def user_materials
+    #     user = User.find(session[:user_id])
+    # end
 end
 

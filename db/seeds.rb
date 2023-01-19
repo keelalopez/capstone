@@ -9,9 +9,11 @@ Project.destroy_all
 Division.destroy_all
 Material.destroy_all
 
-p1 = Project.create(name: "Rivian", user_id: 1)
+p1 = Project.create(name: "Rivian Laguna", user_id: 1)
 p2 = Project.create(name: "Huntington Hospital ", user_id: 1)
 p3 = Project.create(name: "Republic Bank", user_id: 1)
+p4 = Project.create(name: "Ford Manhattan", user_id: 9)
+p5 = Project.create(name: "Chase Santa Monica", user_id: 9)
 
 d1 = Division.create(number: 23, name: "HVAC")
 d2 = Division.create(number: 6, name: "Drywall")
