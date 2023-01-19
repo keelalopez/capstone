@@ -1,7 +1,10 @@
 import {useState} from 'react';
 import { Container, Form, Input, Button } from 'semantic-ui-react';
+import { useNavigate} from 'react-router-dom';
 
 function SignupLoginForms({setCurrentUser}) {
+    let navigate = useNavigate();
+
     // STATE FOR HARNESSING NEW USER INFO FROM FORM
     const [newUser, setNewUser] = useState({
         username: "",
@@ -32,7 +35,10 @@ function SignupLoginForms({setCurrentUser}) {
         })
         .then(res => {
             if(res.ok){
-                res.json().then(console.log("posted!"))
+                res.json().then(data => {
+                    setCurrentUser(data)
+                    navigate("/projects")
+                })
             } else {
                 res.json().then(console.log("failed!"))
             }

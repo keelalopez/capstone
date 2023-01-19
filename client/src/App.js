@@ -7,7 +7,7 @@ import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
 import Header from './Components/Header';
 import AddMaterial from './Components/AddMaterial';
-import { Link , useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 function App() {
   let navigate = useNavigate();
@@ -16,7 +16,7 @@ function App() {
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
-  
+ 
   // USED TO RENDER AUTOMATICALLY MATERIAL CRUD
   const [materialTracker, setMaterialTracker] = useState([])
 
@@ -63,7 +63,7 @@ function App() {
     .then(res => res.json())
     .then(setDivisions)
   }, [currentUser])
-  // console.log(currentUser)
+ 
   return (
    <div className="App">
     <Header currentUser={currentUser} handleLogOut={handleLogOut}/>
