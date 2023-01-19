@@ -4,4 +4,8 @@ class User < ApplicationRecord
 
     validates :name, presence: true
     validates :username, presence: true, uniqueness: true
+
+    def projects_count
+        self.projects.count
+    end
 end

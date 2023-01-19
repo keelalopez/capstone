@@ -4,7 +4,7 @@ class ProjectSerializer < ActiveModel::Serializer
   has_many :materials
   # has_many :divisions, through: :materials
   
-  def materials_count
-    object.materials.count
-  end
+  # def materials_count
+  #   object.materials.count
+  # end
 end

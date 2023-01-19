@@ -10,6 +10,8 @@ class Project < ApplicationRecord
     # validates :architect, presence: true
     # validates :completion_date, presence: true
 
-
+    def materials_count
+        self.materials.count
+    end
 
 end
