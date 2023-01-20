@@ -114,7 +114,7 @@ li a:hover:not(.active) {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  margin: 5% 10%;
+  margin: 0% 12% 0% 12%;
 }
 
 .testing-card {
@@ -132,6 +132,10 @@ li a:hover:not(.active) {
 }
 
 /* ------------------------- DIVISIONS ------------------------- */
+
+.main-division-container {
+  margin: 0% 10% 25% 10%;
+}
 
 .divisions-container {
   display: flex;
