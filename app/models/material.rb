@@ -5,8 +5,12 @@ class Material < ApplicationRecord
     validates :name, presence: true
     validates :status, presence: true
 
-    # def user_materials
-    #     user = User.find(session[:user_id])
+    # def user_materials_array
+    #     # user = User.find(session[:user_id])
+    #     array = self.projects.map do |p|
+    #         p.materials
+    #     end
+    #     array
     # end
 end
 

@@ -63,7 +63,7 @@ function App() {
     .then(res => res.json())
     .then(setDivisions)
   }, [currentUser])
- 
+ console.log(materials)
   return (
    <div className="App">
     <Header currentUser={currentUser} handleLogOut={handleLogOut}/>

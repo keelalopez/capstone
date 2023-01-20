@@ -8,6 +8,14 @@ class MaterialsController < ApplicationController
         render json: materials, status: :ok
     end
 
+    def user_materials
+        # byebug
+        user = User.find(session[:user_id])
+        materials = user.user_materials_array
+        render json: materials.to_json
+        # each_serializer: MaterialSerializer
+    end
+
     def create
         # byebug
         project = Project.find(params[:project_id])

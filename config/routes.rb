@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :divisions, only: [:index]
-  resources :materials, only: [:index, :create, :update, :destroy]
+  resources :materials, only: [:create, :update, :destroy]
   resources :projects, only: [:index, :show]
   resources :users
 
@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   # CUSTOM ROUTE FOR CUSTOM METHOD 
   get "/users/:id/materials", to: "users#materials_count"
+
+  # MATERIALS FOR EACH USER
+  get '/materials', to: "materials#user_materials"
 
 
   # Routing logic: fallback requests for React Router.
