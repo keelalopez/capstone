@@ -12,7 +12,7 @@ class MaterialsController < ApplicationController
         # byebug
         user = User.find(session[:user_id])
         materials = user.user_materials_array
-        render json: materials.to_json
+        render json: materials
         # each_serializer: MaterialSerializer
     end
 
