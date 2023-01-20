@@ -1,11 +1,12 @@
 import {useState} from 'react';
 import { Grid } from 'semantic-ui-react';
+// import ProjectInfo from './ProjectInfo';
 import ProjectElement from './ProjectElement';
 import ProjectMaterials from './ProjectMaterials';
 
 function AllProjects ({projects}) {
     const [projMaterials, setProjMaterials] = useState([])
- 
+
     return (
         <>
             <h1>Projects</h1>
@@ -27,7 +28,7 @@ function AllProjects ({projects}) {
                             <ProjectElement {...eachProject}  setProjMaterials={setProjMaterials}/>
                         </div>
                     )}
-                )}  
+                )}
             </div>
             <br></br>
             <br></br>

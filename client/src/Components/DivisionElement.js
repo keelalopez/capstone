@@ -8,4 +8,4 @@ function DivisionElement ({number, name}) {
     )
 }
 
-export default DivisionElement;
+export default DivisionElement; 
