@@ -48,15 +48,15 @@
   overflow: auto;
 }
 
-li {
+li a {
   display: block;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
-  margin: 2%;
+  margin: 1%
 }
 
-li :hover {
+li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
