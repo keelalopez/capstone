@@ -20,7 +20,7 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
     // }
 
     return (
-        <div>
+        <div className="materials-container">
             <h2>All Materials Here</h2>
             <Container>
                 <Table celled selectable>
