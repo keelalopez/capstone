@@ -36,6 +36,31 @@
     transform: rotate(360deg);
   }
 }
+/* ------------------------- DIVISIONS ------------------------- */
+.vertical-nav ul{
+  list-style-type: none;
+  margin: 1%;
+  padding: 0;
+  width: 10%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 20%;
+  overflow: auto;
+}
+
+li {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 2%;
+}
+
+li :hover {
+  background-color: #555;
+  color: white;
+}
+
 
 /* ------------------------- LANDING PAGE ------------------------- */
 
@@ -70,10 +95,40 @@
 }
 
 /* ------------------------- PROJECTS ------------------------- */
-.all-projects {
+/* .all-projects  {
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
+  border: 2px solid;
+  background-color: pink;
+}
+
+.project {
+  background-color: pink;
+} */
+
+.testing-container {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 5% 10%;
+}
+
+.testing-card {
+  /* background-color: rgb(213, 137, 54); */
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex; /* so child elements can use flexbox too */
+  margin: 0px;
+  padding: 1%;
+  flex: 0 0 10%;
+  /* flex-grow: 1;
+  flex-basis: 16%; */
+  align-items: center;
 }
 
 /* ------------------------- DIVISIONS ------------------------- */
@@ -84,7 +139,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  margin: 5% 10% 5% 10%;
+  margin: 5% 10% 5% 15%;
 }
 
 .division-card {

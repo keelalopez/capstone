@@ -16,7 +16,11 @@ function ProjectElement ({ id, name, setProjMaterials}) {
     // console.log(projMaterials.materials)
     return (
         <div className="project">
-            <Card>
+            <Card 
+                style={{
+                    width: "250px"  
+                }}
+            >
                 <Card.Content header={name} />
                 <Card.Content extra>
                     <Link to="/project">

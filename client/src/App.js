@@ -1,13 +1,13 @@
 import './App.css';
 import {useEffect, useState} from 'react';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route, useNavigate} from 'react-router-dom';
 import LandingPage from './Components/LandingPage.js';
 import AllProjects from './Components/AllProjects.js';
 import AllMaterials from './Components/AllMaterials';
 import AllDivisions from './Components/AllDivisions';
 import Header from './Components/Header';
 import AddMaterial from './Components/AddMaterial';
-import { useNavigate} from 'react-router-dom';
+import VerticalNavBar from './Components/VerticalNavBar';
 
 function App() {
   let navigate = useNavigate();
@@ -63,10 +63,11 @@ function App() {
     .then(res => res.json())
     .then(setDivisions)
   }, [currentUser])
- console.log(materials)
+
   return (
    <div className="App">
     <Header currentUser={currentUser} handleLogOut={handleLogOut}/>
+    <VerticalNavBar />
     
     <Routes>
       <Route path="/" element={<LandingPage 

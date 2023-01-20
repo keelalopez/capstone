@@ -7,21 +7,32 @@ function AllProjects ({projects}) {
     const [projMaterials, setProjMaterials] = useState([])
  
     return (
-        <div className="all-projects">
+        <>
             <h1>Projects</h1>
-            <Grid  relaxed columns={3}> 
+            {/* <div className="all-projects">
+            <Grid columns={3}> 
                 {projects.map(eachProject => {
                     return (
-                        <Grid.Column key={eachProject.id}>
+                        <Grid.Column width={3} key={eachProject.id}>
                             <ProjectElement {...eachProject}  setProjMaterials={setProjMaterials}/>
                         </Grid.Column>
                     )}
                 )}  
             </Grid>
+            </div> */}
+            <div className="testing-container">
+                {projects.map(eachProject => {
+                    return (
+                        <div className="testing-card" key={eachProject.id}>
+                            <ProjectElement {...eachProject}  setProjMaterials={setProjMaterials}/>
+                        </div>
+                    )}
+                )}  
+            </div>
             <br></br>
             <br></br>
             {projMaterials.materials ? <ProjectMaterials projMaterials={projMaterials}/> : null}
-        </div>
+        </>
     )
 }
 
