@@ -37,7 +37,7 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
                     <Table.Footer fullWidth>
                         <Table.Row>
                             <Table.HeaderCell colSpan='5'>
-                                <Link to="/add-material">
+                                <Link to="/add">
                                     <Button
                                         // onClick={handleNewMaterialRedirect}
                                         floated='right'

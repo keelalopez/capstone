@@ -9,6 +9,7 @@ import Header from './Components/Header';
 import AddMaterial from './Components/AddMaterial';
 import VerticalNavBar from './Components/VerticalNavBar';
 import ProjectInfo from './Components/ProjectInfo';
+import ContainerMaterials from './Components/ContainerMaterials';
 
 function App() {
   let navigate = useNavigate();
@@ -78,13 +79,18 @@ function App() {
         projects={projects}/>}/>
       <Route path="/projects-info" element={<ProjectInfo 
         projects={projects}/>}/>
-      <Route path="/materials" element={<AllMaterials 
+      <Route path="/materials" element={<ContainerMaterials 
         setMaterialTracker={setMaterialTracker}
-        materials={materials} />}/>
-      <Route path="/add-material" element={<AddMaterial 
-        setMaterialTracker={setMaterialTracker}
-        projects={projects}
-        divisions={divisions}/>} />
+        materials={materials} />}>
+          <Route path="all" element={<AllMaterials 
+          setMaterialTracker={setMaterialTracker}
+          materials={materials}/>}>
+          </Route>
+          <Route path="add" element={<AddMaterial 
+          setMaterialTracker={setMaterialTracker}
+          projects={projects}
+          divisions={divisions}/>}/>
+      </Route>
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
     </Routes>

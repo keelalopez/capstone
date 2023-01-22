@@ -1,7 +1,5 @@
 import { Button, Card } from 'semantic-ui-react'
-
 import { Link, useNavigate, useParams } from 'react-router-dom';
-
 import { Routes, Route} from 'react-router-dom';
 // import {useState} from 'react';
 
@@ -26,7 +24,6 @@ function ProjectElement ({ id, name, setProjMaterials}) {
 
     return (
         <div className="project">
-            <h2>Project: {name}</h2>
             <Card 
                 style={{
                     width: "250px"  
