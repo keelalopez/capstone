@@ -50,7 +50,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
             if(res.ok){
                 res.json().then(data => {
                     setMaterialTracker(data)
-                    navigate("/materials")
+                    navigate("/materials/all")
                 })
             }
         })
