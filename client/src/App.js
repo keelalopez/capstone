@@ -81,9 +81,8 @@ function App() {
           <Route path="all" element={<AllProjects 
             projects={projects}/>} />
           <Route path="add" element={<AddProject />} />
-          <Route path=":projectId" element={<ProjectInfo />} />
-
-
+          <Route path=":projectId" element={<ProjectInfo 
+            projects={projects}/>} />
       </Route>
       <Route path="/projects-info" element={<ProjectInfo 
         projects={projects}/>}/>

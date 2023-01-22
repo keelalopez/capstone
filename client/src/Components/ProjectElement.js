@@ -18,7 +18,6 @@ function ProjectElement ({ id, name, setProjMaterials}) {
 
     // WILL SHOW PROJECTS INFORMATION
     const handleProjectShow = () => {
-        console.log(id,name)
         navigate(`/projects/${id}`)
     }
 
