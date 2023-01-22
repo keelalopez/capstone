@@ -81,7 +81,7 @@ function App() {
           <Route path="all" element={<AllProjects 
             projects={projects}/>} />
           <Route path="add" element={<AddProject />} />
-
+          <Route path=":projectId" element={<ProjectInfo />} />
 
 
       </Route>

@@ -1,6 +1,6 @@
 import { Button, Card } from 'semantic-ui-react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom'; 
 // import {useState} from 'react';
 
 function ProjectElement ({ id, name, setProjMaterials}) {
@@ -19,7 +19,7 @@ function ProjectElement ({ id, name, setProjMaterials}) {
     // WILL SHOW PROJECTS INFORMATION
     const handleProjectShow = () => {
         console.log(id,name)
-        navigate("/projects-info")
+        navigate(`/projects/${id}`)
     }
 
     return (
@@ -38,6 +38,7 @@ function ProjectElement ({ id, name, setProjMaterials}) {
                     <Button onClick={handleProjMaterials}>Materials</Button>
                 </Card.Content>
             </Card>
+
          </div>
     )
 }

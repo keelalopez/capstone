@@ -1,17 +1,22 @@
 import ProjectInfoElement from './ProjectInfoElement';
+import { useParams } from 'react-router-dom';
 
 function ProjectInfo ({projects}) {
-    const projArray = projects.map((p) => {
-        return (
-            <>
-                <ProjectInfoElement key={p.id} {...p}/>
-            </>
-        )
-    })
+    const {projectId} = useParams();
+    console.log(projectId)
+
+    // const projArray = projects.map((p) => {
+    //     return (
+    //         <>
+    //             <ProjectInfoElement key={p.id} {...p}/>
+    //         </>
+    //     )
+    // })
     
     return (
         <>
-            {projArray}
+            <h1>Project {projectId}</h1>
+            {/* {projArray} */}
         </>
     )
 }
