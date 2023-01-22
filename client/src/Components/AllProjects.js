@@ -3,6 +3,7 @@ import { Grid } from 'semantic-ui-react';
 // import ProjectInfo from './ProjectInfo';
 import ProjectElement from './ProjectElement';
 import ProjectMaterials from './ProjectMaterials';
+import { Link, Outlet } from 'react-router-dom';
 
 function AllProjects ({projects}) {
     const [projMaterials, setProjMaterials] = useState([])
@@ -10,6 +11,7 @@ function AllProjects ({projects}) {
     return (
         <>
             <h1>Projects</h1>
+            
             {/* <div className="all-projects">
             <Grid columns={3}> 
                 {projects.map(eachProject => {

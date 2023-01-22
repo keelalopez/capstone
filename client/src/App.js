@@ -10,6 +10,8 @@ import AddMaterial from './Components/AddMaterial';
 import VerticalNavBar from './Components/VerticalNavBar';
 import ProjectInfo from './Components/ProjectInfo';
 import ContainerMaterials from './Components/ContainerMaterials';
+import AddProject from './Components/AddProject';
+import ContainerProjects from './Components/ContainerProjects';
 
 function App() {
   let navigate = useNavigate();
@@ -75,8 +77,14 @@ function App() {
       <Route path="/" element={<LandingPage 
         setProjects={setProjects}
         setCurrentUser={setCurrentUser} />} />
-      <Route path="/projects" element={<AllProjects 
-        projects={projects}/>}/>
+      <Route path="/projects" element={<ContainerProjects />}>
+          <Route path="all" element={<AllProjects 
+            projects={projects}/>} />
+          <Route path="add" element={<AddProject />} />
+
+
+
+      </Route>
       <Route path="/projects-info" element={<ProjectInfo 
         projects={projects}/>}/>
       <Route path="/materials" element={<ContainerMaterials 
