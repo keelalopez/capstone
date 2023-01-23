@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2023_01_11_220250) do
   create_table "materials", force: :cascade do |t|
     t.string "name"
     t.string "status"
+    t.integer "lead_time"
+    t.string "need_by_date"
     t.integer "project_id"
     t.integer "division_id"
     t.datetime "created_at", precision: 6, null: false

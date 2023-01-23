@@ -29,6 +29,8 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
                             <Table.HeaderCell width={4}>Material</Table.HeaderCell>
                             <Table.HeaderCell>Status</Table.HeaderCell>
                             <Table.HeaderCell>Division</Table.HeaderCell>
+                            <Table.HeaderCell>Lead Time</Table.HeaderCell>
+                            <Table.HeaderCell>Need By</Table.HeaderCell>
                             <Table.HeaderCell width={4}>Project</Table.HeaderCell>
                             <Table.HeaderCell width={2}>Update</Table.HeaderCell>
                         </Table.Row>
