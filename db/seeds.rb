@@ -9,12 +9,12 @@ Project.destroy_all
 Division.destroy_all
 Material.destroy_all
 
-p1 = Project.create(name: "Rivian Laguna", user_id: 1)
-p2 = Project.create(name: "Huntington Hospital ", user_id: 1)
-p3 = Project.create(name: "Republic Bank", user_id: 1)
+p1 = Project.create(name: "Logitech DTLA", user_id: 1, address: "1100 S Broadway PH, Los Angeles, CA 90015, United States", owner: "Logitech", completion_date: "2023-09-15")
+p2 = Project.create(name: "HM Hospital Pasadena", user_id: 1, address: "270 S Lake Ave, Pasadena, CA 91101, United States", owner: "HMH", completion_date: "2023-12-15")
+p3 = Project.create(name: "Republic Bank Culver", user_id: 1, address: "10808 Culver Blvd, Culver City, CA 90230, United States", owner: "Republic Bank", completion_date: "2023-10-21")
 
-p4 = Project.create(name: "Ford Manhattan", user_id: 9)
-p5 = Project.create(name: "Chase Santa Monica", user_id: 9)
+p4 = Project.create(name: "Ford Manhattan", user_id: 9, address: "1200 N Sepulveda Blvd, Manhattan Beach, CA 90266, United States", owner: "Ford", completion_date: "2023-11-05")
+p5 = Project.create(name: "Chase Santa Monica", user_id: 9, address: "2525 Michigan Ave, Santa Monica, CA 90404, United States", owner: "Chase Bank", completion_date: "2023-07-13")
 
 d1 = Division.create(number: 3, name: "Concrete")
 d2 = Division.create(number: 5, name: "Steel")
@@ -34,8 +34,13 @@ d14 = Division.create(number: 26, name: "Electrical")
 m1 = Material.create(name: "Drywall", status: "Pending", project_id: p1.id,division_id: d3.id)
 m2 = Material.create(name: "Screws", status: "Pending", project_id: p1.id, division_id: d3.id)
 m3 = Material.create(name: "Concrete", status: "Pending", project_id: p1.id, division_id: d1.id)
+m8 = Material.create(name: "Wood Doors", status: "Pending", project_id: p1.id, division_id: d5.id)
+m9 = Material.create(name: "Metal Ducts", status: "Pending", project_id: p1.id, division_id: d13.id)
+m4 = Material.create(name: "Steel", status: "Complete", project_id: p1.id, division_id: d2.id)
+m5 = Material.create(name: "Cables", status: "Complete", project_id: p1.id, division_id: d1.id)
+m11 = Material.create(name: "Pipe", status: "Pending", project_id: p1.id, division_id: d12.id)
 
-m4 = Material.create(name: "Steely", status: "Pending", project_id: p2.id, division_id: d2.id)
+m4 = Material.create(name: "Steel", status: "Pending", project_id: p2.id, division_id: d2.id)
 m5 = Material.create(name: "Cables", status: "Pending", project_id: p2.id, division_id: d1.id)
 
 m6 = Material.create(name: "Tape", status: "Pending", project_id: p3.id, division_id: d2.id)
