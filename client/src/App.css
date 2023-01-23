@@ -188,7 +188,6 @@ li a:hover:not(.active) {
   flex-direction: column;
   justify-self: center;
   width: 30%;
-  margin-top: 3em;
   font-weight: bold;
 }
 
@@ -205,5 +204,37 @@ li a:hover:not(.active) {
 }
 
 #add-material-container form input[type="submit"]:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+#add-project-container {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+#add-project-container form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 30%;
+  font-weight: bold;
+}
+
+#add-project-container form input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  height: 35px;
+}
+
+#add-project-container form input[type="submit"] {
+  background-color: rgb(219, 219, 219);
+  border: none;
+}
+
+#add-project-container form input[type="submit"]:hover {
   background-color: rgb(189, 189, 189);
 }
