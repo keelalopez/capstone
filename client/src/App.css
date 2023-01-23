@@ -141,6 +141,10 @@ li a:hover:not(.active) {
   margin: 3% 14% 0% 14%; 
 }
 
+#project-info-container {
+  margin: 1% 26%; 
+}
+
 /* ------------------------- DIVISIONS ------------------------- */
 
 .main-division-container {
