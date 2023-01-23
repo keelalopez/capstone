@@ -1,11 +1,11 @@
 
-function DivisionElement ({name}) {
+function DivisionElement ({number, name}) {
 
     return (
-        <div>
-            <h3>Division Element here: {name}</h3>
+        <div className="division-card">
+            <h3>0{number} {name}</h3>
         </div>
     )
 }
 
-export default DivisionElement;
+export default DivisionElement; 

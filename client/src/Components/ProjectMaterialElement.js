@@ -1,9 +1,8 @@
 import { Form, Input, Button } from 'semantic-ui-react';
 import { Table } from "semantic-ui-react";
 import { useState } from 'react';
-// import AddMaterial from './AddMaterial.js'
 
-function MaterialElement ({id, name, status, division, project, setMaterialTracker}) {
+function ProjectMaterialElement ({id, name, status, division, project, setMaterialTracker}) {
     const [displayEditForms, setDisplayEditForms] = useState(false);
     // const [addMaterialForm, setAddMaterialForm] = useState(false);
     const [updatedMaterial, setUpdatedMaterial] = useState({
@@ -104,4 +103,4 @@ function MaterialElement ({id, name, status, division, project, setMaterialTrack
     )
 }
 
-export default MaterialElement;
+export default ProjectMaterialElement;

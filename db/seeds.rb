@@ -9,21 +9,39 @@ Project.destroy_all
 Division.destroy_all
 Material.destroy_all
 
-p1 = Project.create(name: "Rivian", user_id: 1)
+p1 = Project.create(name: "Rivian Laguna", user_id: 1)
 p2 = Project.create(name: "Huntington Hospital ", user_id: 1)
 p3 = Project.create(name: "Republic Bank", user_id: 1)
 
-d1 = Division.create(number: 23, name: "Electrical")
-d2 = Division.create(number: 6, name: "Drywall")
-d3 = Division.create(number: 3, name: "Concrete")
-d4 = Division.create(number: 5, name: "Steel")
+p4 = Project.create(name: "Ford Manhattan", user_id: 9)
+p5 = Project.create(name: "Chase Santa Monica", user_id: 9)
 
-m1 = Material.create(name: "Drywall", status: "Pending", project_id: p1.id,division_id: d2.id)
-m2 = Material.create(name: "Screws", status: "Pending", project_id: p1.id, division_id: d2.id)
-m3 = Material.create(name: "Concrete", status: "Pending", project_id: p1.id, division_id: d3.id)
+d1 = Division.create(number: 3, name: "Concrete")
+d2 = Division.create(number: 5, name: "Steel")
+d3 = Division.create(number: 6, name: "Drywall")
+d4 = Division.create(number: 7, name: "Thermal Protection")
+d5 = Division.create(number: 8, name: "Openings")
+d6 = Division.create(number: 9, name: "Finishes")
+d7 = Division.create(number: 10, name: "Specialties")
+d8 = Division.create(number: 11, name: "Equipment")
+d9 = Division.create(number: 12, name: "Furnishings")
+d10 = Division.create(number: 13, name: "Special Construction")
+d11 = Division.create(number: 21, name: "Fire Supression")
+d12 = Division.create(number: 22, name: "Plumbing")
+d13 = Division.create(number: 23, name: "HVAC")
+d14 = Division.create(number: 26, name: "Electrical")
 
-m4 = Material.create(name: "Steely", status: "Pending", project_id: p2.id, division_id: d4.id)
+m1 = Material.create(name: "Drywall", status: "Pending", project_id: p1.id,division_id: d3.id)
+m2 = Material.create(name: "Screws", status: "Pending", project_id: p1.id, division_id: d3.id)
+m3 = Material.create(name: "Concrete", status: "Pending", project_id: p1.id, division_id: d1.id)
+
+m4 = Material.create(name: "Steely", status: "Pending", project_id: p2.id, division_id: d2.id)
 m5 = Material.create(name: "Cables", status: "Pending", project_id: p2.id, division_id: d1.id)
 
 m6 = Material.create(name: "Tape", status: "Pending", project_id: p3.id, division_id: d2.id)
-m7 = Material.create(name: "C Channels", status: "Pending", project_id: p3.id, division_id: d4.id)
+m7 = Material.create(name: "C Channels", status: "Pending", project_id: p3.id, division_id: d2.id)
+
+m8 = Material.create(name: "Wood Doors", status: "Pending", project_id: p4.id, division_id: d5.id)
+m9 = Material.create(name: "Metal Ducts", status: "Pending", project_id: p4.id, division_id: d13.id)
+m10 = Material.create(name: "Metal Doors", status: "Pending", project_id: p5.id, division_id: d5.id)
+m11 = Material.create(name: "Pipe", status: "Pending", project_id: p5.id, division_id: d12.id)

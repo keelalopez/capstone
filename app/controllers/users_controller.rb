@@ -17,6 +17,11 @@ class UsersController < ApplicationController
         render json: user, status: :ok
     end
 
+    def materials_count
+        user = User.find(session[:user_id])
+        render json: user.materials_count, status: :ok
+    end
+ 
     private
 
     def user_params

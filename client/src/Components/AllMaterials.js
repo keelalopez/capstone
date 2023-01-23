@@ -1,7 +1,8 @@
-import MaterialElement from "./MaterialElement";
 import { Container, Table, Button, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import MaterialElement from "./MaterialElement";
 
-function AllMaterials ({materials, setMaterialTracker}) {
+function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
     // WILL MAP THROUGH LIST OF ALL MATERIALS AND RENDER IN TABLE
     const materialsArray = materials.map(eachMaterial => {
         return (
@@ -9,8 +10,17 @@ function AllMaterials ({materials, setMaterialTracker}) {
         )
     })
 
+    // MATERIALS#CREATE
+    // const handleNewMaterialRedirect = () => {
+    //     return (
+    //         <div>
+    //             <AddMaterial />
+    //         </div>
+    //     )
+    // }
+
     return (
-        <div>
+        <div className="materials-container">
             <h2>All Materials Here</h2>
             <Container>
                 <Table celled selectable>
@@ -27,14 +37,17 @@ function AllMaterials ({materials, setMaterialTracker}) {
                     <Table.Footer fullWidth>
                         <Table.Row>
                             <Table.HeaderCell colSpan='5'>
-                                <Button
-                                    floated='right'
-                                    icon
-                                    labelPosition='left'
-                                    primary
-                                    size='small'>
-                                    <Icon name='plus' /> Add Material
-                                </Button>
+                                <Link to="/add">
+                                    <Button
+                                        // onClick={handleNewMaterialRedirect}
+                                        floated='right'
+                                        icon
+                                        labelPosition='left'
+                                        primary
+                                        size='small'>
+                                        <Icon name='plus' /> Add Material
+                                    </Button>
+                                </Link>
                             </Table.HeaderCell>
                         </Table.Row>
                     </Table.Footer>

@@ -1,8 +1,10 @@
 import {useState} from 'react';
 import { Container, Form, Input, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function LoginForm ({setCurrentUser}) {
+
+function LoginForm ({setCurrentUser, setProjects}) {
+    let navigate = useNavigate(); 
 
     const [user, setUser] = useState({
         username: "",
@@ -28,7 +30,12 @@ function LoginForm ({setCurrentUser}) {
         })
         .then(res => {
             if(res.ok){
-                res.json().then(console.log("working!"))
+                res.json().then(data => {
+                    // console.log(data)
+                    setCurrentUser(data)
+                    setProjects(data.projects)
+                    navigate("/projects")
+                })
             } else {
                 res.json().then(console.log("try again buddy!"))
             }
@@ -58,9 +65,9 @@ function LoginForm ({setCurrentUser}) {
                         value={user.password}
                         onChange={handleChange}
                         />
-                    <Link to="/projects">
+                    {/* <Link to="/projects"> */}
                         <Button type="submit" size='tiny'>Submit</Button>
-                    </Link>
+                    {/* </Link> */}
                 </Form>
             </Container>
         </div>
