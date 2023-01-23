@@ -10,7 +10,7 @@ function AddProject () {
     });
 
     // UPDATES THE STATE OBJECT TO TRACK USER INPUT
-    const handleMaterialChange = (e) => {
+    const handleProjChange = (e) => {
         setNewProj({
             ...newProj,
             [e.target.name]: e.target.value
@@ -26,40 +26,40 @@ function AddProject () {
                     // label="Project Name"
                     type="name"
                     name="name"
-                    // value={newMaterial.name}
-                    // onChange={handleMaterialChange}
+                    value={newProj.name}
+                    onChange={handleProjChange}
                 />
                 <label>Address</label>
                 <input 
                     // label="Project Name"
                     type="address"
                     name="address"
-                    // value={newMaterial.name}
-                    // onChange={handleMaterialChange}
+                    value={newProj.address}
+                    onChange={handleProjChange}
                 />
                 <label>Architect</label>
                 <input 
                     // label="Project Name"
                     type="architect"
                     name="architect"
-                    // value={newMaterial.name}
-                    // onChange={handleMaterialChange}
+                    value={newProj.architect}
+                    onChange={handleProjChange}
                 />
                 <label>Owner</label>
                 <input 
                     // label="Project Name"
                     type="owner"
                     name="owner"
-                    // value={newMaterial.name}
-                    // onChange={handleMaterialChange}
+                    value={newProj.owner}
+                    onChange={handleProjChange}
                 />
                 <label>Completion Date</label>
                 <input 
                     // label="Project Name"
                     type="date"
                     name="completion_date"
-                    // value={newMaterial.name}
-                    // onChange={handleMaterialChange}
+                    value={newProj.completion_date}
+                    onChange={handleProjChange}
                 />
                 <button>Submit</button>
             </form>
