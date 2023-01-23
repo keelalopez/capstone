@@ -176,7 +176,7 @@ li a:hover:not(.active) {
 
 /* ------------------------- MATERIALS ------------------------- */
 .materials-container {
-  margin: 5% 10% 5% 15%;
+  margin: 1%;
 }
 
 /* ------------------------- FORMS ------------------------- */
@@ -241,4 +241,42 @@ li a:hover:not(.active) {
 
 #add-project-container form input[type="submit"]:hover {
   background-color: rgb(189, 189, 189);
+}
+
+
+/* ------------------------- ROUTER NAV ------------------------- */
+.container-router-nav {
+  /* background-color: pink; */
+  margin: 1% 10% 5% 15%;
+  /* display: flex-row;
+  align-items: center; */
+}
+
+.container-router-nav nav {
+  /* background-color:red; */
+  margin: 1%;
+  display: flex;
+  align-items: right;
+  justify-content: flex-start;
+}
+
+.container-router-nav button {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.container-router-nav button:hover {
+  color: white;
+  background-color: rgb(213, 137, 54);
 }

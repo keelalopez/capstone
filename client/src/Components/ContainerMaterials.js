@@ -1,15 +1,19 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom'; 
+import {  Link, Outlet } from 'react-router-dom'; 
 
 function ContainerMaterials () {
     return(
-        <>
-        <nav>
-            <Link to="all">All Materials</Link>
-            <Link to="add">Add New Material</Link>
-        </nav>
+        <div className="container-router-nav ">
+            <nav>
+                <Link to="all">
+                    <button>All Materials</button>
+                </Link>
+                <Link to="add">
+                    <button>Add New Material</button>
+                </Link>
+            </nav>
 
-        <Outlet />
-        </>
+            <Outlet />
+        </div>
     )
 }
 

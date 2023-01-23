@@ -97,6 +97,8 @@ function MaterialElement ({id, name, status, lead_time, need_by_date, division, 
                     </Form>
                 </Table.Cell>
                 <Table.Cell>0{division.number} {division.name}</Table.Cell>
+                <Table.Cell>{lead_time} weeks</Table.Cell>
+                <Table.Cell>{need_by_date}</Table.Cell>
                 <Table.Cell>{project.name}</Table.Cell>
                 <Table.Cell></Table.Cell>
             </Table.Row>
