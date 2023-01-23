@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function AddProject () {
+function AddProject ({setMaterialTracker}) {
     let navigate = useNavigate();
 
     // STATE THAT STORES NEW PROJECT INFO
@@ -17,10 +17,29 @@ function AddProject () {
         })
     }
 
+    // PROJECTS#POST
+    const handleProjectPost = (e) => {
+        e.preventDefault();
+        // console.log(newProj)
+        fetch("/projects", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newProj)
+        })
+        .then(res => {
+            if(res.ok){
+                res.json().then(data => {
+                    setMaterialTracker(data)
+                    navigate("/projects/all")
+                })
+            }
+        })
+    }
+
     return (
         <div id="add-project-container">
             <h1>Add New Project</h1>
-            <form>
+            <form onSubmit={handleProjectPost}>
                 <label>Project Name</label>
                 <input 
                     // label="Project Name"

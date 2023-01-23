@@ -80,7 +80,7 @@ function App() {
       <Route path="/projects" element={<ContainerProjects />}>
           <Route path="all" element={<AllProjects 
             projects={projects}/>} />
-          <Route path="add" element={<AddProject />} />
+          <Route path="add" element={<AddProject setMaterialTracker={setMaterialTracker}/>} />
           <Route path=":projectId" element={<ProjectInfo 
             projects={projects}/>} />
       </Route>
