@@ -32,9 +32,10 @@ function AllProjects ({projects}) {
                     )}
                 )}
             </div>
-            <br></br>
-            <br></br>
+            <br></br><br></br>
             {projMaterials.materials ? <ProjectMaterials projMaterials={projMaterials}/> : null}
+            <br></br><br></br><br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
         </>
     )
 }

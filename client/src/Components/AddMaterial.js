@@ -57,11 +57,12 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
     }
 
     return (
-        <div id="add-material-container">
+        <div id="add-container">
             <h2>New Material Form</h2>
             <form onSubmit={handleMaterialPost}>
                 <label>Material Name</label>
                 <input 
+                    required
                     label="Material Name"
                     type="name"
                     name="name"
@@ -71,6 +72,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
 
                 <label>Status</label>
                 <input 
+                    required
                     label="Status"
                     type="status"
                     name="status"
@@ -80,6 +82,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
 
                 <label>Division</label>
                 <select
+                    required
                     label="Division"
                     type="division"
                     name="division_id" 
@@ -91,6 +94,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
 
                 <label>Project</label>
                 <select
+                    required
                     label="Project"
                     type="project"
                     name="project_id" 

@@ -55,7 +55,8 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
                     </Table.Footer>
                 </Table>
             </Container>
-
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
     )
 }

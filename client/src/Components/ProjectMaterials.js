@@ -16,7 +16,7 @@ function ProjectMaterials ({projMaterials}) {
     // })
     
     return (
-        <div>
+        <div id="project-materials-container">
             <h2>{projMaterials.name} Materials</h2>
             <Container>
                 <Table celled selectable>
@@ -34,6 +34,7 @@ function ProjectMaterials ({projMaterials}) {
                     {materialsArray}
                 </Table>
             </Container>
+           
         </div>
         
     )

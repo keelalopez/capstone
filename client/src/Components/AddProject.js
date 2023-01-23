@@ -37,12 +37,13 @@ function AddProject ({setMaterialTracker}) {
     }
 
     return (
-        <div id="add-project-container">
+        <div id="add-container">
             <h1>Add New Project</h1>
             <form onSubmit={handleProjectPost}>
                 <label>Project Name</label>
                 <input 
-                    // label="Project Name"
+                    // placeholder="Project Name"
+                    required
                     type="name"
                     name="name"
                     value={newProj.name}
@@ -50,7 +51,8 @@ function AddProject ({setMaterialTracker}) {
                 />
                 <label>Address</label>
                 <input 
-                    // label="Project Name"
+                    required
+                    // placeholder="Address"
                     type="address"
                     name="address"
                     value={newProj.address}
@@ -58,7 +60,8 @@ function AddProject ({setMaterialTracker}) {
                 />
                 <label>Architect</label>
                 <input 
-                    // label="Project Name"
+                    // placeholder="Architect"
+                    required
                     type="architect"
                     name="architect"
                     value={newProj.architect}
@@ -66,15 +69,15 @@ function AddProject ({setMaterialTracker}) {
                 />
                 <label>Owner</label>
                 <input 
-                    // label="Project Name"
+                    // placeholder="Owner"
                     type="owner"
                     name="owner"
                     value={newProj.owner}
                     onChange={handleProjChange}
                 />
-                <label>Completion Date</label>
+                <label>Expected Date of Completion</label>
                 <input 
-                    // label="Project Name"
+                    // placeholder="Expected Date of Completion"
                     type="date"
                     name="completion_date"
                     value={newProj.completion_date}
