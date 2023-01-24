@@ -38,6 +38,14 @@ class User < ApplicationRecord
         end
     end
 
+    def delivered_materials_filter
+        # Using the 'user_materials_array' as helper method
+        materials = self.user_materials_array
+        materials.filter do |m|
+            m[:status] == 'Complete'
+        end
+    end
+
 end
 
 

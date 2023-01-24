@@ -19,7 +19,10 @@ Rails.application.routes.draw do
 
   # FILTERS PENDING MATERIALS
   get '/materials/pending', to: "materials#pending_materials"
-  # get '/materials/pending', to: "users#pending_materials"
+  
+  # FILTERS COMPLETED MATERIALS
+  get '/materials/delivered', to: "materials#delivered_materials"
+
 
 
   # Routing logic: fallback requests for React Router.

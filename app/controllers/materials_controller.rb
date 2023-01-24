@@ -24,6 +24,13 @@ class MaterialsController < ApplicationController
         render json: x
     end
 
+    def delivered_materials
+        user = User.find(session[:user_id])
+        # refer to user model for custom method and helper method
+        x = user.delivered_materials_filter
+        render json: x
+    end
+
     def create
         # byebug
         project = Project.find(params[:project_id])

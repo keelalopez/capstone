@@ -20,6 +20,7 @@ function App() {
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
   const [pendingMaterials, setPendingMaterials] = useState([])
+  const [deliveredMaterials, setDeliveredMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
  
   // USED TO RENDER AUTOMATICALLY MATERIAL CRUD
@@ -75,6 +76,13 @@ function App() {
     .then(res => res.json())
     .then(setPendingMaterials)
   }, [currentUser, materialTracker, projects])
+  
+  // FETCHING DELIVERED MATERIALS ✅
+  useEffect(() => {
+    fetch('/materials/delivered')
+    .then(res => res.json())
+    .then(setDeliveredMaterials)
+  }, [currentUser, materialTracker, projects])
 
 
   return (
@@ -109,6 +117,9 @@ function App() {
           <Route path="pending" element={<AllMaterials 
           setMaterialTracker={setMaterialTracker}
           materials={pendingMaterials}/>}/>
+          <Route path="delivered" element={<AllMaterials 
+          setMaterialTracker={setMaterialTracker}
+          materials={deliveredMaterials}/>}/>
       </Route>
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
