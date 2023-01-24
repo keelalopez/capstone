@@ -16,7 +16,7 @@ function ProjectMaterials ({projMaterials}) {
     // })
     
     return (
-        <div>
+        <div id="project-materials-container">
             <h2>{projMaterials.name} Materials</h2>
             <Container>
                 <Table celled selectable>
@@ -25,13 +25,16 @@ function ProjectMaterials ({projMaterials}) {
                             <Table.HeaderCell>Material</Table.HeaderCell>
                             <Table.HeaderCell>Status</Table.HeaderCell>
                             <Table.HeaderCell>Division</Table.HeaderCell>
+                            <Table.HeaderCell>Lead Time</Table.HeaderCell>
+                            <Table.HeaderCell>Need By</Table.HeaderCell>
                             <Table.HeaderCell>Project</Table.HeaderCell>
-                            <Table.HeaderCell>Update</Table.HeaderCell>
+                            <Table.HeaderCell >Update</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     {materialsArray}
                 </Table>
             </Container>
+           
         </div>
         
     )

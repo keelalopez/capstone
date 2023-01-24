@@ -1,15 +1,19 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom'; 
+import { Link, Outlet } from 'react-router-dom'; 
 
 function ContainerProjects () {
     return (
-        <>
+        <div className="container-router-nav ">
             <nav>
-                <Link to="all">All Projects</Link>
-                <Link to="add">Add Project</Link>
+                <Link to="all">
+                    <button>All Projects</button>
+                </Link>
+                <Link to="add">
+                    <button>Add Project</button>
+                </Link>
             </nav>
 
             <Outlet />
-        </>
+        </div>
     )
 }
 

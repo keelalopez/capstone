@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Container, Table} from 'semantic-ui-react';
 
 function ProjectInfo ({projects}) {
     const {projectId} = useParams();
@@ -20,19 +21,46 @@ function ProjectInfo ({projects}) {
     const projObj = projectDisplayed[0]
 
     return (
-        <>
+        <div id="project-info-container">
             {projObj ? 
-                <div>
-                    <h1>{projObj.name}</h1>
-                    <h4>Address: {projObj.address}</h4>
-                    <h4>Owner: {projObj.owner}</h4>
-                    <h4>Completion Date: {projObj.completion_date}</h4>
-                    <h4>Total Materials: {projObj.materials_count}</h4>
-                    <h4>Pending Materials: {projObj.pending_count}</h4>
-                </div>
+                <Container>
+                    <h1>{projObj.name} Details</h1>
+                    <Table>
+                        <Table.Header>
+                            <Table.Row>
+                                <Table.HeaderCell width={2}>Attribute</Table.HeaderCell>
+                                <Table.HeaderCell width={4}>Detail</Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Header>
+                        <Table.Row>
+                            <Table.Cell>Name: </Table.Cell>
+                            <Table.Cell>{projObj.name}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>Address:</Table.Cell>
+                            <Table.Cell>{projObj.address}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>Owner:</Table.Cell>
+                            <Table.Cell>{projObj.owner}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>Completion Date:</Table.Cell>
+                            <Table.Cell>{projObj.completion_date}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>Total Materials:</Table.Cell>
+                            <Table.Cell>{projObj.materials_count}</Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>Pending Materials:</Table.Cell>
+                            <Table.Cell>{projObj.pending_count}</Table.Cell>
+                        </Table.Row>
+                    </Table>
+                </Container>
             : null
             }
-        </>
+        </div>
     )
 }
 

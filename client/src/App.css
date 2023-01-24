@@ -46,6 +46,8 @@
   position: fixed;
   height: 20%;
   overflow: auto;
+  border-radius: 5px;
+  box-shadow:0 0 4px rgba(0,0,0,0.5);
 }
 
 li a {
@@ -58,6 +60,7 @@ li a {
 
 li a:hover:not(.active) {
   background-color: #555;
+  border-radius: 5px;
   color: white;
 }
 
@@ -107,6 +110,11 @@ li a:hover:not(.active) {
   background-color: pink;
 } */
 
+.project-materials-container {
+  /* background-color: palevioletred;
+  margin: 1% 0% 30% 0%; */
+}
+
 .testing-container {
   /* background-color: red; */
   display: flex;
@@ -139,6 +147,11 @@ li a:hover:not(.active) {
   background-color: pink;
   border: 3px solid;
   margin: 3% 14% 0% 14%; 
+  
+}
+
+#project-info-container {
+  margin: 1% 26%; 
 }
 
 /* ------------------------- DIVISIONS ------------------------- */
@@ -172,69 +185,113 @@ li a:hover:not(.active) {
 
 /* ------------------------- MATERIALS ------------------------- */
 .materials-container {
-  margin: 5% 10% 5% 15%;
+  margin: 1%;
 }
 
-/* ------------------------- FORMS ------------------------- */
-#add-material-container {
+/* ------------------------- POST FORMS ------------------------- */
+#add-container {
+  /* background-color: rgb(145, 151, 174); */
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  border: 2px solid;
+  border-color:white;
+  border-radius: 10px;
+  margin: 1% 20%;
+  padding: 35px;
+  box-shadow:0 0 4px rgba(0,0,0,0.5);
 }
 
-#add-material-container form {
-  display: flex;
+#add-container form {
+  /* display: flex;
   flex-direction: column;
-  justify-self: center;
-  width: 30%;
-  font-weight: bold;
+  justify-self: center; */
+  width: 50%;
+  /* font-weight: bold; */
 }
 
-#add-material-container form input {
+/* #add-container hr {
+  border: 1px solid;
+  width: 80%;
+  margin: 0% 0% 3% 0%;
+} */
+
+#add-container label {
+  /* background-color:rgb(145, 151, 174); */
+  float: left;  
+  color: black;
+}
+
+#add-container form input {
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 35px;
+  border: 0px solid;
+  box-shadow:0 0 4px rgba(0,0,0,0.2);
+}
+#add-container form select {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 35px;
+  border: 0px solid;
+  box-shadow:0 0 4px rgba(0,0,0,0.2);
 }
 
-#add-material-container form input[type="submit"] {
-  background-color: rgb(219, 219, 219);
+#add-container form input:focus {
+  background-color: rgb(230, 205, 179);
+  color: white;
+}
+
+#add-container form input[type="submit"] {
+  background-color: rgb(145, 151, 174);
   border: none;
 }
 
-#add-material-container form input[type="submit"]:hover {
+#add-container form input[type="submit"]:hover {
   background-color: rgb(189, 189, 189);
 }
 
-#add-project-container {
-  background-color: pink;
+
+/* ------------------------- ROUTER NAV ------------------------- */
+.container-router-nav {
+  /* background-color: pink; */
+  margin: 1% 10% 5% 15%;
+  /* display: flex-row;
+  align-items: center; */
+}
+
+.container-router-nav nav {
+  /* background-color:red; */
+  margin: 1%;
   display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+  align-items: right;
+  justify-content: flex-start;
 }
 
-#add-project-container form {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  width: 30%;
-  font-weight: bold;
+.container-router-nav button {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* font-family: "Roboto", sans-serif; */
+  font-weight: 300;
+  color: black;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
 }
 
-#add-project-container form input {
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  height: 35px;
+.container-router-nav button:hover {
+  color: white;
+  background-color: rgb(213, 137, 54);
 }
 
-#add-project-container form input[type="submit"] {
-  background-color: rgb(219, 219, 219);
-  border: none;
-}
-
-#add-project-container form input[type="submit"]:hover {
-  background-color: rgb(189, 189, 189);
+.testing {
+  color: palevioletred
 }

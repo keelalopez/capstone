@@ -5,12 +5,12 @@ class Material < ApplicationRecord
     validates :name, presence: true
     validates :status, presence: true
 
-    # def user_materials_array
-    #     # user = User.find(session[:user_id])
-    #     array = self.projects.map do |p|
-    #         p.materials
-    #     end
-    #     array
-    # end
+    def order_by
+        # (self.lead_time*7)
+        # DateTime.current
+        # (self.need_by_date.to_datetime - DateTime.current).to_i/7
+        # days until date by needed
+        (self.need_by_date.to_datetime - DateTime.current).to_i
+    end
 end
 
