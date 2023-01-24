@@ -23,7 +23,7 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
         <div className="materials-container">
             <h2>All Materials Here</h2>
             <Container>
-                <Table celled selectable>
+                <Table selectable celled>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell width={3}>Material</Table.HeaderCell>

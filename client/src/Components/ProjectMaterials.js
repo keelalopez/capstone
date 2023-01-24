@@ -28,7 +28,7 @@ function ProjectMaterials ({projMaterials}) {
                             <Table.HeaderCell>Lead Time</Table.HeaderCell>
                             <Table.HeaderCell>Need By</Table.HeaderCell>
                             <Table.HeaderCell>Project</Table.HeaderCell>
-                            <Table.HeaderCell>Update</Table.HeaderCell>
+                            <Table.HeaderCell >Update</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     {materialsArray}
