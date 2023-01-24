@@ -144,7 +144,7 @@ li a:hover:not(.active) {
 } */
 
 .project-info-card {
-  background-color: pink;
+  /* background-color: pink; */
   border: 3px solid;
   margin: 3% 14% 0% 14%; 
   
@@ -294,4 +294,12 @@ li a:hover:not(.active) {
 
 .testing {
   color: palevioletred
+}
+
+/* ------------------------- ROUTER NAV ------------------------- */
+
+.user-info-container {
+  background-color: pink;
+  border: 3px solid;
+  margin: 3% 25% 0% 25%; 
 }

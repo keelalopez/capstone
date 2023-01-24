@@ -7,7 +7,7 @@ function VerticalNavBar () {
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/materials">Materials</a></li>
                 <li><a href="/divisions">Divisions</a></li>
-                <li><a href="/">User</a></li>
+                <li><a href="/user">User</a></li>
 
             </ul>
         </div>

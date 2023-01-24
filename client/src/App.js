@@ -12,6 +12,7 @@ import ProjectInfo from './Components/ProjectInfo';
 import ContainerMaterials from './Components/ContainerMaterials';
 import AddProject from './Components/AddProject';
 import ContainerProjects from './Components/ContainerProjects';
+import UserInfo from './Components/UserInfo';
 
 function App() {
   let navigate = useNavigate();
@@ -85,6 +86,7 @@ function App() {
   }, [currentUser, materialTracker, projects])
 
 
+
   return (
    <div className="App">
     <Header currentUser={currentUser} handleLogOut={handleLogOut}/>
@@ -94,6 +96,8 @@ function App() {
       <Route path="/" element={<LandingPage 
         setProjects={setProjects}
         setCurrentUser={setCurrentUser} />} />
+      <Route path="/user" element={<UserInfo 
+        currentUser={currentUser}/>} />
       <Route path="/projects" element={<ContainerProjects />}>
           <Route path="all" element={<AllProjects 
             projects={projects}/>} />
