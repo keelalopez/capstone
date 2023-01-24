@@ -62,6 +62,13 @@ function App() {
     .then(setMaterials)
   }, [currentUser, materialTracker, projects])
   
+  // FETCHING DIVISIONS
+  useEffect(() => {
+    fetch("/divisions")
+    .then(res => res.json())
+    .then(setDivisions)
+  }, [currentUser])
+  
   // FETCHING PENDING MATERIALS ✅
   useEffect(() => {
     fetch("/materials/pending")
@@ -69,12 +76,6 @@ function App() {
     .then(setPendingMaterials)
   }, [currentUser, materialTracker, projects])
 
-  // FETCHING DIVISIONS
-  useEffect(() => {
-    fetch("/divisions")
-    .then(res => res.json())
-    .then(setDivisions)
-  }, [currentUser])
 
   return (
    <div className="App">

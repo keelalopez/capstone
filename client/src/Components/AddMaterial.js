@@ -8,6 +8,8 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
     const [newMaterial, setNewMaterial] = useState({
         name: "",
         status: "",
+        lead_time: 0,
+        need_by_date: "",
         project_id: "",
         division_id: ""
     })
@@ -77,6 +79,26 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
                     type="status"
                     name="status"
                     value={newMaterial.status}
+                    onChange={handleMaterialChange}
+                />
+
+                <label>Lead Time</label>
+                <input 
+                    required
+                    label="lead_time"
+                    type="integer"
+                    name="lead_time"
+                    value={newMaterial.lead_time}
+                    onChange={handleMaterialChange}
+                />
+                <p>*Add number of weeks</p>
+
+                <label>Need Delivered By</label>
+                <input 
+                    required
+                    type="date"
+                    name="need_by_date"
+                    value={newMaterial.need_by_date}
                     onChange={handleMaterialChange}
                 />
 

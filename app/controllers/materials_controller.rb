@@ -31,6 +31,8 @@ class MaterialsController < ApplicationController
         material = Material.create(
             name: params[:name],
             status: params[:status],
+            lead_time: params[:lead_time],
+            need_by_date: params[:need_by_date],
             project_id: project.id,
             division_id: division.id
         )
