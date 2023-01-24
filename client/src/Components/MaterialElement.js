@@ -3,7 +3,7 @@ import { Table } from "semantic-ui-react";
 import { useState } from 'react';
 // import AddMaterial from './AddMaterial.js'
 
-function MaterialElement ({id, name, status, lead_time, need_by_date, division, project, setMaterialTracker}) {
+function MaterialElement ({id, name, status, lead_time, need_by_date, order_by_date, division, project, setMaterialTracker}) {
     const [displayEditForms, setDisplayEditForms] = useState(false);
     // const [addMaterialForm, setAddMaterialForm] = useState(false);
     const [updatedMaterial, setUpdatedMaterial] = useState({
@@ -68,6 +68,7 @@ function MaterialElement ({id, name, status, lead_time, need_by_date, division, 
                     <Table.Cell>0{division.number} {division.name}</Table.Cell>
                     <Table.Cell>{lead_time} weeks</Table.Cell>
                     <Table.Cell>{need_by_date}</Table.Cell>
+                    <Table.Cell>{order_by_date.slice(0, 10)}</Table.Cell>
                     <Table.Cell>{project.name}</Table.Cell>
                     <Table.Cell >
                         <div className="mini ui icon button">
