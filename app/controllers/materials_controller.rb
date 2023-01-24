@@ -16,6 +16,14 @@ class MaterialsController < ApplicationController
         # each_serializer: MaterialSerializer
     end
 
+    #Materials Controller
+    def pending_materials
+        user = User.find(session[:user_id])
+        # refer to user model for custom method and helper method
+        x = user.pending_materials_filter
+        render json: x
+    end
+
     def create
         # byebug
         project = Project.find(params[:project_id])
@@ -42,6 +50,8 @@ class MaterialsController < ApplicationController
         material.destroy
         render json: material, status: :ok
     end
+
+    
 
     private
 

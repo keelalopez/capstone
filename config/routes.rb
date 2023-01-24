@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   # MATERIALS FOR EACH USER
   get '/materials', to: "materials#user_materials"
 
+  # FILTERS PENDING MATERIALS
+  get '/materials/pending', to: "materials#pending_materials"
+  # get '/materials/pending', to: "users#pending_materials"
+
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

@@ -39,7 +39,7 @@ function AllMaterials ({materials, setMaterialTracker, projects, divisions}) {
                     {materialsArray}
                     <Table.Footer fullWidth>
                         <Table.Row>
-                            <Table.HeaderCell colSpan='7'>
+                            <Table.HeaderCell colSpan='8'>
                                 <Link to="/add">
                                     <Button
                                         // onClick={handleNewMaterialRedirect}
