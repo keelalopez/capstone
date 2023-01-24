@@ -82,7 +82,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
                     onChange={handleMaterialChange}
                 />
 
-                <label>Lead Time</label>
+                <label>Lead Time*</label>
                 <input 
                     required
                     label="lead_time"
@@ -91,7 +91,6 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
                     value={newMaterial.lead_time}
                     onChange={handleMaterialChange}
                 />
-                <p>*Add number of weeks</p>
 
                 <label>Need Delivered By</label>
                 <input 
@@ -125,6 +124,7 @@ function AddMaterial ({divisions, projects, setMaterialTracker}) {
                     <option value="">Select</option>
                     {projectOptions}
                 </select>
+                <p>*Add lead time in number of weeks</p>
                 <button>Submit</button>
             </form>
         </div>
