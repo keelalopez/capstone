@@ -1,4 +1,4 @@
-import { Container, Table} from 'semantic-ui-react';
+import { Container, Table, Button} from 'semantic-ui-react';
 
 function UserInfo ({currentUser}) {
     
@@ -37,6 +37,7 @@ function UserInfo ({currentUser}) {
                         </Table.Row>
                        
                     </Table>
+                    <Button>Edit User Info</Button>
                 </Container>
             :
                 null

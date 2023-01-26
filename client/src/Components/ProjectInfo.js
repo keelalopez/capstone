@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Container, Table} from 'semantic-ui-react';
+import { Container, Table, Button} from 'semantic-ui-react';
 
 function ProjectInfo ({projects}) {
     const {projectId} = useParams();
@@ -57,6 +57,8 @@ function ProjectInfo ({projects}) {
                             <Table.Cell>{projObj.pending_count}</Table.Cell>
                         </Table.Row>
                     </Table>
+                    <Button>Edit Project Info</Button>
+                    <Button>Delete Project</Button>
                 </Container>
             : null
             }
