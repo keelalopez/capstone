@@ -68,19 +68,27 @@ li a:hover:not(.active) {
 /* ------------------------- LANDING PAGE ------------------------- */
 
 .sign-in-form {
-  background-color: rgb(145, 151, 174);
-  /* align-items: center; */
+  /* background-color: rgb(145, 151, 174); */
+  background-color: rgb(205, 108, 108);
+  align-items: center;
   padding: 3em;
   border-radius: 8px;
   margin: 20px;
+  width: 78%;
 }
+
 .about {
   /* background-color: rgb(145, 151, 174); */
-  /* align-items: center; */
+  align-items: center;
   padding: 3em;
   border-radius: 8px;
-  margin: 20px;
+  margin: 0px;
   height: 400px;
+  
+}
+
+.about img {
+  height: 600px;
 }
 
 #login-container form {
