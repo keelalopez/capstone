@@ -10,9 +10,18 @@ Users -< Projects -< Materials >- Divisions
 
 ## Demo
 
-
 https://user-images.githubusercontent.com/113480086/218840111-33e38622-769f-46bd-a89e-2106b8dd2b4e.mov
 
+## Tech
+Front End
+- React
+- Semantic UI
+- BrowserRouter
+
+Back End
+- Ruby
+- Ruby on Rails
+- PostgreSQL
 
 ## Set up
 
@@ -20,6 +29,12 @@ After cloning repo, run front end and server to test functionality.
 
 - npm start --prefix client
 - rails s
+
+## Installing Dependencies
+From within root directory: 
+
+- npm install semantic-ui
+- npm install --save react-browser-router
 
 ## How to Use
 
