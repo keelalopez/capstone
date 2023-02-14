@@ -38,6 +38,8 @@ A diagram showing React component tree.
 A diagram showing database set up and CRDU actions available to each. 
 ![Screen Shot 2023-02-14 at 10 39 52](https://user-images.githubusercontent.com/113480086/218827938-c7a4e1e7-6355-456f-b957-7d19cbf92143.png)
 
+![Screen Shot 2023-02-14 at 11 42 31](https://user-images.githubusercontent.com/113480086/218841494-f69255fb-d29c-44cb-80c3-c0d6d9ab0fe9.png)
+
 ## Demos
 ![Screen Shot 2023-02-14 at 10 32 51](https://user-images.githubusercontent.com/113480086/218826951-80795c53-5c67-45cd-bc02-da84ab849274.png)
 
