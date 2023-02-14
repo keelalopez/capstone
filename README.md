@@ -4,12 +4,15 @@
 
 Brix is an app to help Project Engineers in the Contractor and Construction Management field. It aims to seamlessly allow users to track procurement for materials for multiple projects. A User can create an account and add multiple projects. Materials have full CRUD and after specifying the date of material installation and the lead time, the app will provide the date the user needs to place the order before it risks being delayed. 
 
+A User has many projects. A project has many materials. A project has many divisions, through materials. 
+
+Users -< Projects -< Materials >- Divisions
+
 ## Demo
-![Screen Shot 2023-02-14 at 10 32 51](https://user-images.githubusercontent.com/113480086/218826951-80795c53-5c67-45cd-bc02-da84ab849274.png)
 
-![Screen Shot 2023-02-14 at 10 34 42](https://user-images.githubusercontent.com/113480086/218826974-0f42c7e3-c00f-4566-95ad-c486562fa3dd.png)
 
-![Screen Shot 2023-02-14 at 10 34 58](https://user-images.githubusercontent.com/113480086/218826987-1444365b-0a1b-4e67-9a5b-ed04631b16d5.png)
+https://user-images.githubusercontent.com/113480086/218840111-33e38622-769f-46bd-a89e-2106b8dd2b4e.mov
+
 
 ## Set up
 
@@ -35,4 +38,10 @@ A diagram showing React component tree.
 A diagram showing database set up and CRDU actions available to each. 
 ![Screen Shot 2023-02-14 at 10 39 52](https://user-images.githubusercontent.com/113480086/218827938-c7a4e1e7-6355-456f-b957-7d19cbf92143.png)
 
-## 
+## Demos
+![Screen Shot 2023-02-14 at 10 32 51](https://user-images.githubusercontent.com/113480086/218826951-80795c53-5c67-45cd-bc02-da84ab849274.png)
+
+![Screen Shot 2023-02-14 at 10 34 42](https://user-images.githubusercontent.com/113480086/218826974-0f42c7e3-c00f-4566-95ad-c486562fa3dd.png)
+
+![Screen Shot 2023-02-14 at 10 34 58](https://user-images.githubusercontent.com/113480086/218826987-1444365b-0a1b-4e67-9a5b-ed04631b16d5.png)
+
