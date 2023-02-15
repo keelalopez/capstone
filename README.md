@@ -23,18 +23,18 @@ Back End
 - Ruby on Rails
 - PostgreSQL
 
+## Installing Dependencies
+From within root directory: 
+
+- npm install semantic-ui
+- npm install --save react-browser-router
+
 ## Set up
 
 After cloning repo, run front end and server to test functionality.
 
 - npm start --prefix client
 - rails s
-
-## Installing Dependencies
-From within root directory: 
-
-- npm install semantic-ui
-- npm install --save react-browser-router
 
 ## How to Use
 
