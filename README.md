@@ -33,8 +33,8 @@ From within root directory:
 
 After cloning repo, run front end and server to test functionality.
 
-- npm start --prefix client
-- rails s
+rails s: run the backend on http://localhost:3000
+npm start --prefix client: run the frontend on http://localhost:4000
 
 ## How to Use
 
