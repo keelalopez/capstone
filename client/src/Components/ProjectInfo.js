@@ -13,6 +13,13 @@ function ProjectInfo ({projects}) {
     //     )
     // })
 
+    const handleDelete = () => {
+        console.log('testing deleting project')
+        fetch(`/projects/${projectId}`, {
+            method: 'DELETE',
+        })
+    }
+
     const projectDisplayed = projects.filter (p => {
         if (p.id === parseInt(projectId)) {
             return p
@@ -58,7 +65,7 @@ function ProjectInfo ({projects}) {
                         </Table.Row>
                     </Table>
                     <Button>Edit Project Info</Button>
-                    <Button>Delete Project</Button>
+                    <Button onClick={handleDelete}>Delete Project</Button>
                 </Container>
             : null
             }

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :divisions, only: [:index]
   resources :materials, only: [:create, :update, :destroy]
-  resources :projects, only: [:index, :show, :create, :delete]
+  resources :projects, only: [:index, :show, :create, :destroy]
   resources :users
 
   # CUSTOM ROUTES 
