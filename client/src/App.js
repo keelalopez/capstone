@@ -104,7 +104,9 @@ function App() {
             projects={projects}/>} />
           <Route path="add" element={<AddProject setMaterialTracker={setMaterialTracker}/>} />
           <Route path=":projectId" element={<ProjectInfo 
-            projects={projects}/>} />
+            projects={projects}
+            // ADDED 3/7/23
+            setMaterialTracker={setMaterialTracker}/>} />
       </Route>
       <Route path="/projects-info" element={<ProjectInfo 
         projects={projects}/>}/>

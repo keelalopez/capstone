@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom';
 import { Container, Table, Button} from 'semantic-ui-react';
+import { useNavigate } from 'react-router-dom';
 
-function ProjectInfo ({projects}) {
+function ProjectInfo ({projects, setMaterialTracker}) {
     const {projectId} = useParams();
+    let navigate = useNavigate();
 
     // USES PROJECT INFO ELEMENT. CONSIDER DELETING
     // const projArray = projects.map((p) => {
@@ -12,11 +14,23 @@ function ProjectInfo ({projects}) {
     //         </>
     //     )
     // })
+    
 
     const handleDelete = () => {
-        console.log('testing deleting project')
         fetch(`/projects/${projectId}`, {
             method: 'DELETE',
+        })
+        .then(res => {
+            if(res.ok){
+                res.json()
+                .then(data => {
+                    setMaterialTracker(data)
+                    navigate("/projects/all")
+                })
+            } else {
+                res.json().then(console.log("there's a problem"))
+            }
+
         })
     }
 

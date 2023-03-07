@@ -38,7 +38,7 @@ function MaterialElement ({id, name, status, lead_time, need_by_date, order_by_d
                 res.json()
                 .then(setMaterialTracker)
             } else {
-                res.json().then(console.log("beep beep problem beep"))
+                res.json().then(console.log("there's a problem"))
             }
         })
     }
