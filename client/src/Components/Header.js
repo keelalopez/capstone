@@ -1,4 +1,4 @@
-import { Menu, MenuItem, Icon, Button } from "semantic-ui-react";
+import { Menu, MenuItem, Icon, Button, Image } from "semantic-ui-react";
 
 function Header ({currentUser, handleLogOut}) {
 
@@ -11,8 +11,12 @@ function Header ({currentUser, handleLogOut}) {
                         <Icon name="user" />
                     </Button>
                     { currentUser && <button className='ui button' onClick={handleLogOut}>Log Out</button> }
+                {/* <MenuItem>
+                    <Image scr="https://i.imgur.com/ZsbUWtG.jpg" size='tiny' />
+                </MenuItem> */}
                 </MenuItem>
             </Menu>
+
         </div>
     )
 }

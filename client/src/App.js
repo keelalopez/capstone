@@ -13,6 +13,7 @@ import ContainerMaterials from './Components/ContainerMaterials';
 import AddProject from './Components/AddProject';
 import ContainerProjects from './Components/ContainerProjects';
 import UserInfo from './Components/UserInfo';
+import Footer from './Components/Footer';
 
 function App() {
   let navigate = useNavigate();
@@ -128,6 +129,7 @@ function App() {
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
     </Routes>
+    {/* <Footer /> */}
    </div>
   );
 }
