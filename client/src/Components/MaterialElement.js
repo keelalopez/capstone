@@ -1,7 +1,6 @@
 import { Form, Input, Button } from 'semantic-ui-react';
 import { Table } from "semantic-ui-react";
 import { useState } from 'react';
-// import AddMaterial from './AddMaterial.js'
 
 function MaterialElement ({id, name, status, lead_time, need_by_date, order_by_date, division, project, setMaterialTracker}) {
     const [displayEditForms, setDisplayEditForms] = useState(false);
@@ -39,7 +38,7 @@ function MaterialElement ({id, name, status, lead_time, need_by_date, order_by_d
                 res.json()
                 .then(setMaterialTracker)
             } else {
-                res.json().then(console.log("beep beep problem beep"))
+                res.json().then(console.log("there's a problem"))
             }
         })
     }
@@ -62,23 +61,43 @@ function MaterialElement ({id, name, status, lead_time, need_by_date, order_by_d
         <>
         { !displayEditForms ? 
             <Table.Body>
-                <Table.Row>
-                    <Table.Cell>{name}</Table.Cell>
-                    <Table.Cell>{status}</Table.Cell>
-                    <Table.Cell>0{division.number} {division.name}</Table.Cell>
-                    <Table.Cell>{lead_time} weeks</Table.Cell>
-                    <Table.Cell>{need_by_date}</Table.Cell>
-                    <Table.Cell>{order_by_date.slice(0, 10)}</Table.Cell>
-                    <Table.Cell>{project.name}</Table.Cell>
-                    <Table.Cell >
-                        <div className="mini ui icon button">
-                            <i className="pencil alternate icon" onClick={handleEdit}></i>
-                        </div>
-                        <div className="mini ui icon button">
-                            <i className="trash icon" onClick={handleDelete}></i>
-                        </div>
-                    </Table.Cell>
-                </Table.Row>
+                {status === 'Pending' ? 
+                    <Table.Row warning>
+                        <Table.Cell>{name}</Table.Cell>
+                        <Table.Cell>{status}</Table.Cell>
+                        <Table.Cell>0{division.number} {division.name}</Table.Cell>
+                        <Table.Cell>{lead_time} weeks</Table.Cell>
+                        <Table.Cell>{need_by_date}</Table.Cell>
+                        <Table.Cell>{order_by_date.slice(0, 10)}</Table.Cell>
+                        <Table.Cell>{project.name}</Table.Cell>
+                        <Table.Cell >
+                            <div className="mini ui icon button">
+                                <i className="pencil alternate icon" onClick={handleEdit}></i>
+                            </div>
+                            <div className="mini ui icon button">
+                                <i className="trash icon" onClick={handleDelete}></i>
+                            </div>
+                        </Table.Cell>
+                    </Table.Row>
+                :
+                    <Table.Row>
+                        <Table.Cell>{name}</Table.Cell>
+                        <Table.Cell>{status}</Table.Cell>
+                        <Table.Cell>0{division.number} {division.name}</Table.Cell>
+                        <Table.Cell>{lead_time} weeks</Table.Cell>
+                        <Table.Cell>{need_by_date}</Table.Cell>
+                        <Table.Cell>{order_by_date.slice(0, 10)}</Table.Cell>
+                        <Table.Cell>{project.name}</Table.Cell>
+                        <Table.Cell >
+                            <div className="mini ui icon button">
+                                <i className="pencil alternate icon" onClick={handleEdit}></i>
+                            </div>
+                            <div className="mini ui icon button">
+                                <i className="trash icon" onClick={handleDelete}></i>
+                            </div>
+                        </Table.Cell>
+                    </Table.Row>
+                }
             </Table.Body>
         :
         <Table.Body>

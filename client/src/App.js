@@ -12,6 +12,8 @@ import ProjectInfo from './Components/ProjectInfo';
 import ContainerMaterials from './Components/ContainerMaterials';
 import AddProject from './Components/AddProject';
 import ContainerProjects from './Components/ContainerProjects';
+import UserInfo from './Components/UserInfo';
+import Footer from './Components/Footer';
 
 function App() {
   let navigate = useNavigate();
@@ -19,6 +21,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [projects, setProjects] = useState([])
   const [materials, setMaterials] = useState([])
+  const [pendingMaterials, setPendingMaterials] = useState([])
+  const [deliveredMaterials, setDeliveredMaterials] = useState([])
   const [divisions, setDivisions] = useState([])
  
   // USED TO RENDER AUTOMATICALLY MATERIAL CRUD
@@ -60,13 +64,29 @@ function App() {
     .then(res => res.json())
     .then(setMaterials)
   }, [currentUser, materialTracker, projects])
-
+  
   // FETCHING DIVISIONS
   useEffect(() => {
     fetch("/divisions")
     .then(res => res.json())
     .then(setDivisions)
   }, [currentUser])
+  
+  // FETCHING PENDING MATERIALS ✅
+  useEffect(() => {
+    fetch("/materials/pending")
+    .then(res => res.json())
+    .then(setPendingMaterials)
+  }, [currentUser, materialTracker, projects])
+  
+  // FETCHING DELIVERED MATERIALS ✅
+  useEffect(() => {
+    fetch('/materials/delivered')
+    .then(res => res.json())
+    .then(setDeliveredMaterials)
+  }, [currentUser, materialTracker, projects])
+
+
 
   return (
    <div className="App">
@@ -77,12 +97,16 @@ function App() {
       <Route path="/" element={<LandingPage 
         setProjects={setProjects}
         setCurrentUser={setCurrentUser} />} />
+      <Route path="/user" element={<UserInfo 
+        currentUser={currentUser}/>} />
       <Route path="/projects" element={<ContainerProjects />}>
           <Route path="all" element={<AllProjects 
             projects={projects}/>} />
           <Route path="add" element={<AddProject setMaterialTracker={setMaterialTracker}/>} />
           <Route path=":projectId" element={<ProjectInfo 
-            projects={projects}/>} />
+            projects={projects}
+            // ADDED 3/7/23
+            setMaterialTracker={setMaterialTracker}/>} />
       </Route>
       <Route path="/projects-info" element={<ProjectInfo 
         projects={projects}/>}/>
@@ -97,10 +121,17 @@ function App() {
           setMaterialTracker={setMaterialTracker}
           projects={projects}
           divisions={divisions}/>}/>
+          <Route path="pending" element={<AllMaterials 
+          setMaterialTracker={setMaterialTracker}
+          materials={pendingMaterials}/>}/>
+          <Route path="delivered" element={<AllMaterials 
+          setMaterialTracker={setMaterialTracker}
+          materials={deliveredMaterials}/>}/>
       </Route>
       <Route path="/divisions" element={<AllDivisions 
         divisions={divisions}/>} />
     </Routes>
+    {/* <Footer /> */}
    </div>
   );
 }

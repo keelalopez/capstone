@@ -20,5 +20,6 @@ class Material < ApplicationRecord
         order_by_date = (DateTime.current + days_order)
         
     end
+
 end
 

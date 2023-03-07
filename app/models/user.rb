@@ -28,7 +28,27 @@ class User < ApplicationRecord
         end
         startingArray
     end
+
+    # USED IN MATERIALS CONTROLLER 
+    def pending_materials_filter
+        # Using the 'user_materials_array' as helper method
+        test = self.user_materials_array
+        test.filter do |m|
+            m[:status] == 'Pending'
+        end
+    end
+
+    def delivered_materials_filter
+        # Using the 'user_materials_array' as helper method
+        materials = self.user_materials_array
+        materials.filter do |m|
+            m[:status] == 'Complete'
+        end
+    end
+
 end
+
+
 
 # def user_materials_array
 #     # user = User.find(session[:user_id])

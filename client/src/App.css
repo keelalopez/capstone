@@ -41,10 +41,10 @@
   list-style-type: none;
   margin: 1%;
   padding: 0;
-  width: 10%;
+  width: 11%;
   background-color: #f1f1f1;
   position: fixed;
-  height: 20%;
+  height: 24%;
   overflow: auto;
   border-radius: 5px;
   box-shadow:0 0 4px rgba(0,0,0,0.5);
@@ -59,7 +59,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #555;
+  background-color: rgb(211, 113, 108);
   border-radius: 5px;
   color: white;
 }
@@ -68,19 +68,27 @@ li a:hover:not(.active) {
 /* ------------------------- LANDING PAGE ------------------------- */
 
 .sign-in-form {
-  background-color: rgb(145, 151, 174);
-  /* align-items: center; */
+  /* background-color: rgb(145, 151, 174); */
+  background-color: rgb(205, 108, 108);
+  align-items: center;
   padding: 3em;
   border-radius: 8px;
   margin: 20px;
+  width: 78%;
 }
+
 .about {
   /* background-color: rgb(145, 151, 174); */
-  /* align-items: center; */
+  align-items: center;
   padding: 3em;
   border-radius: 8px;
-  margin: 20px;
+  margin: 0px;
   height: 400px;
+  
+}
+
+.about img {
+  height: 600px;
 }
 
 #login-container form {
@@ -144,7 +152,7 @@ li a:hover:not(.active) {
 } */
 
 .project-info-card {
-  background-color: pink;
+  /* background-color: pink; */
   border: 3px solid;
   margin: 3% 14% 0% 14%; 
   
@@ -225,7 +233,7 @@ li a:hover:not(.active) {
 
 #add-container form input {
   width: 100%;
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 5px;
   height: 35px;
   border: 0px solid;
@@ -233,7 +241,7 @@ li a:hover:not(.active) {
 }
 #add-container form select {
   width: 100%;
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 5px;
   height: 35px;
   border: 0px solid;
@@ -295,3 +303,25 @@ li a:hover:not(.active) {
 .testing {
   color: palevioletred
 }
+
+/* ------------------------- USER INFO ------------------------- */
+
+.user-info-container {
+  background-color: pink;
+  border: 3px solid;
+  margin: 3% 25% 0% 25%; 
+}
+
+/* #footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  padding-bottom: 3em;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  border-top: 1px solid rgb(199, 94, 94);
+} */

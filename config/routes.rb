@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :divisions, only: [:index]
   resources :materials, only: [:create, :update, :destroy]
-  resources :projects, only: [:index, :show, :create]
+  resources :projects, only: [:index, :show, :create, :destroy]
   resources :users
 
   # CUSTOM ROUTES 
@@ -16,6 +16,13 @@ Rails.application.routes.draw do
 
   # MATERIALS FOR EACH USER
   get '/materials', to: "materials#user_materials"
+
+  # FILTERS PENDING MATERIALS
+  get '/materials/pending', to: "materials#pending_materials"
+  
+  # FILTERS COMPLETED MATERIALS
+  get '/materials/delivered', to: "materials#delivered_materials"
+
 
 
   # Routing logic: fallback requests for React Router.

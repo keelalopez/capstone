@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
     belongs_to :user
 
-    has_many :materials
+    has_many :materials, dependent: :destroy
     has_many :divisions, through: :materials
 
     validates :name, presence: true, uniqueness: true
