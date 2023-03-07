@@ -26,7 +26,7 @@ Back End
 ## Installing Dependencies
 From within root directory: 
 
-- npm install semantic-ui
+- npm install semantic-ui --prefix client
 - npm install --save react-browser-router
 
 ## Set up
