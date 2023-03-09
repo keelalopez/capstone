@@ -44,6 +44,7 @@ Create an account with Brix. Proceed to add projects and provide required detail
 - Go to the Projects section on side bar and click on materials to see materials filtered by project
 - Go to the Materials section on side bar to see a list of all materials
 - Within Materials, refer to the nested nav bar to see materials filtered by status or if they are critical
+- Delete projects. Note this will delete all materials related to the project. 
 
 ## Wireframe
 A diagram showing React component tree. 
