@@ -14,14 +14,17 @@ https://user-images.githubusercontent.com/113480086/218840111-33e38622-769f-46bd
 
 ## Tech
 Front End
-- React
-- Semantic UI
-- BrowserRouter
+- React Framework 
+- Semantic UI styled components
+- Client-side routing via React BrowserRouter
 
 Back End
-- Ruby
 - Ruby on Rails
-- PostgreSQL
+- Model-View-Controller Architectural Development Patter
+- RESTful API utilizing ActiveRecord and Active Model Serializers
+- User Authentication and authorization
+- PostgreSQL selational database
+- User password encryption with BCryot Gem
 
 ## Installing Dependencies
 From within root directory: 
