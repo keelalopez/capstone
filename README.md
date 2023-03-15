@@ -15,6 +15,7 @@ https://user-images.githubusercontent.com/113480086/218840111-33e38622-769f-46bd
 ## Tech
 Front End
 - React Framework 
+- CSS styled website
 - Semantic UI styled components
 - Client-side routing via React BrowserRouter
 
