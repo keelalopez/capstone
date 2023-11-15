@@ -24,8 +24,8 @@ Back End
 - Model-View-Controller Architectural Development Pattern
 - RESTful API utilizing ActiveRecord and Active Model Serializers
 - User Authentication and authorization
-- PostgreSQL selational database
-- User password encryption with BCryot Gem
+- PostgreSQL relational database
+- User password encryption with BCryopt Gem
 
 ## Installing Dependencies
 From within root directory: 
