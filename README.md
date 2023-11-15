@@ -21,7 +21,7 @@ Front End
 
 Back End
 - Ruby on Rails
-- Model-View-Controller Architectural Development Patter
+- Model-View-Controller Architectural Development Pattern
 - RESTful API utilizing ActiveRecord and Active Model Serializers
 - User Authentication and authorization
 - PostgreSQL selational database
